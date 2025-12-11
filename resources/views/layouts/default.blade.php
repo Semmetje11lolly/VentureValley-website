@@ -38,7 +38,7 @@
 
 <footer>
     <div class="footer-container">
-        <div class="flex grow justify-between">
+        <div class="flex grow justify-between pb-2.5">
             <ul class="list-none">
                 <b>Pretpark</b>
                 <li><a href="">Attracties</a></li>
@@ -61,11 +61,12 @@
             </ul>
             <ul class="list-none">
                 <b>Webshop</b>
-                <li><a href="">VIP Rank</a></li>
-                <li><a href="">Plus Rank</a></li>
-                <li><a href="">Cosmetics</a></li>
+                <li><a href="https://shop.venturevalleymc.nl/category/vip" target="_blank">VIP Rank</a></li>
+                <li><a href="https://shop.venturevalleymc.nl/category/plus" target="_blank">Plus Rank</a></li>
+                <li><a href="https://shop.venturevalleymc.nl/category/cosmetics" target="_blank">Cosmetics</a></li>
             </ul>
         </div>
+        <hr>
         <div class="flex grow items-center justify-between gap-14 text-[12px]">
             <div class="flex flex-col">
                 © Copyright {{ date('Y') }} VentureValley
@@ -80,11 +81,31 @@
             </ul>
             <div class="grow"></div>
             <ul class="flex list-none gap-2.5 text-[25px]">
-                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-twitch"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-discord"></i></a></li>
+                <li>
+                    <a href="https://instagram.com/venturevalleymc" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://tiktok.com/@venturevalley" target="_blank">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@venturevalley" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitch.tv/venturevalleymc" target="_blank">
+                        <i class="fa-brands fa-twitch"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://discord.venturevalleymc.nl" target="_blank">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
