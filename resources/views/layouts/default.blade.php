@@ -20,6 +20,14 @@
 <body>
 
 <nav>
+    @can('admin')
+        <div class="bg-gray-900 text-white">
+            <div class="nav-container">
+                <a href="">Dashboard</a>
+                <a href="{{ route('profile.edit') }}">Hey, {{ auth()->user()->name }}</a>
+            </div>
+        </div>
+    @endcan
     <div class="nav-container">
         <a href="{{ route('home') }}">
             <img src="{{ asset('/images/LogoFullBlue.png') }}" alt="">

@@ -21,6 +21,9 @@ html {
 
     --text-color: var(--color-brown);
     --body-background-color: var(--color-lightgray);
+    --button-primary-background-color: var(--color-primary);
+    --button-primary-hover-background-color: #008888;
+    --button-transparent-hover-background-color: #FFFFFF40;
 }
 
 body {
@@ -36,11 +39,28 @@ body {
     margin: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Amaranth", sans-serif;
+    line-height: 1;
+    font-weight: bold;
+
+    margin: 0;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
 main {
     flex-grow: 1;
-
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 nav, footer {
@@ -70,7 +90,7 @@ nav .nav-headings {
 
     list-style-type: none;
 
-    font-weight: bold;
+    font-weight: 600;
 }
 
 footer {
