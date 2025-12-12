@@ -14,9 +14,9 @@
     ];
 
     $sizeClass = [
-        'small' => 'px-4 py-2 text-sm',
-        'medium' => 'px-6 py-3 text-base',
-        'large' => 'px-8 py-4 text-xl'
+        'small' => 'px-4 py-1.5 text-sm',
+        'medium' => 'px-6 py-2 text-base',
+        'large' => 'px-8 py-2.5 text-xl'
     ];
 
     $classes = $baseClass . ' ' . $variantClass[$variant] . ' ' . $sizeClass[$size];

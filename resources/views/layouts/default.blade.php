@@ -40,6 +40,8 @@
     </div>
 </nav>
 
+{{ $header ?? '' }}
+
 <main>
     {{ $slot }}
 </main>
