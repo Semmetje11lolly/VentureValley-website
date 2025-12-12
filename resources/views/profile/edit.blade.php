@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-default-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Profile') }}
@@ -24,6 +24,12 @@
                     @include('profile.partials.delete-user-form')
                 </div>
             </div>
+
+            <form method="post" action="{{ route('logout') }}">
+                @csrf
+
+                <x-primary-button>Logout</x-primary-button>
+            </form>
         </div>
     </div>
-</x-app-layout>
+</x-default-layout>
