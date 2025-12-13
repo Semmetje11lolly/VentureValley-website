@@ -70,10 +70,15 @@ main {
 
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 12px;
 }
 
 nav, footer {
     background-color: var(--color-white);
+}
+
+nav {
+    position: relative;
 }
 
 nav .nav-container {
@@ -84,7 +89,7 @@ nav .nav-container {
 
     max-width: 1200px;
     margin: 0 auto;
-    padding: 12px;
+    padding: 0 12px;
 }
 
 nav img {
@@ -100,6 +105,40 @@ nav .nav-headings {
     list-style-type: none;
 
     font-weight: 600;
+}
+
+nav .nav-headings li {
+    display: inline-block;
+
+    padding: 28px 0;
+}
+
+nav #mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    opacity: 0;
+
+    width: 100%;
+    z-index: 50;
+}
+
+nav #mega-menu.fade-in {
+    transition: opacity 0.25s;
+    opacity: 1;
+}
+
+nav #mega-menu.active {
+    opacity: 1;
+}
+
+nav #mega-menu .nav-container {
+    display: none;
+}
+
+nav #mega-menu .nav-container.active {
+    display: block;
 }
 
 footer {

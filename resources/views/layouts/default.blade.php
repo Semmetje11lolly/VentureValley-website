@@ -14,14 +14,14 @@
 
     <!-- Scripts -->
     <script src="https://kit.fontawesome.com/d0c003e79c.js" crossorigin="anonymous"></script>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/mega-menu.js'])
 </head>
 
 <body>
 
 <nav>
     @can('admin')
-        <div class="bg-gray-900 text-white">
+        <div class="bg-gray-900 text-white py-3">
             <div class="nav-container">
                 <a href="">Dashboard</a>
                 <a href="{{ route('profile.edit') }}">Hey, {{ auth()->user()->name }}</a>
@@ -29,14 +29,91 @@
         </div>
     @endcan
     <div class="nav-container">
-        <a href="{{ route('home') }}">
+        <a href="{{ route('home') }}" aria-label="Home">
             <img src="{{ asset('/images/LogoFullBlue.png') }}" alt="">
         </a>
         <ul class="nav-headings">
-            <li>Ontdek VentureValley</li>
-            <li>Plan je bezoek</li>
-            <li>Contact & Over</li>
+            <li tabindex="0" data-mega="ontdek">Ontdek VentureValley</li>
+            <li tabindex="0" data-mega="bezoek">Plan je bezoek</li>
+            <li tabindex="0" data-mega="contact">Contact & Over</li>
         </ul>
+    </div>
+    <div class="bg-[--body-background-color] border-t border-solid border-[#E5E7EB] py-5" id="mega-menu">
+        <div class="nav-container" data-mega="ontdek">
+            {{--<div class="flex grow justify-between pb-2.5">--}}
+            <div class="grid grid-cols-4 pb-2.5">
+                <ul class="list-none">
+                    <b>Pretpark</b>
+                    <li><a href="">Attracties</a></li>
+                    <li><a href="">Parkshows</a></li>
+                    <li><a href="">Horeca</a></li>
+                    <li><a href="">Souvenirs</a></li>
+                    <li><a href="">Plattegrond</a></li>
+                </ul>
+                <ul class="list-none">
+                    <b>Recente Evenementen</b>
+                    <li><a href="">Halloween 2025</a></li>
+                    <li><a href="">1e verjaardag</a></li>
+                    <li><a href="">Wavebreaker Opening</a></li>
+                    <li><a href="">Halloween 2024</a></li>
+                    <li><a href="">De Grote Opening</a></li>
+                </ul>
+                <ul class="list-none">
+                    <b>Meer VentureValley</b>
+                    <li><a href="">VentureValley Blog</a></li>
+                    <li><a href="">VentureValley App</a></li>
+                    <li><a href="">Creator-programma</a></li>
+                    <li><a href="">Werken bij VentureValley</a></li>
+                </ul>
+                <div class="flex items-center">
+                    <x-button url="https://shop.venturevalleymc.nl" target="_black">
+                        Bezoek Webshop
+                    </x-button>
+                </div>
+            </div>
+        </div>
+        <div class="nav-container" data-mega="bezoek">
+            <div class="grid grid-cols-4 pb-2.5">
+                <ul class="list-none">
+                    <b>Praktische Informatie</b>
+                    <li><a href="">Bezoeken</a></li>
+                    <li><a href="">Openingstijden</a></li>
+                    <li><a href="">Plattegrond</a></li>
+                    <li><a href="">Onderhoudskalender</a></li>
+                    <li><a href="">Parkreglement</a></li>
+                </ul>
+                <ul class="list-none">
+                    <b>Ranks & Cosmetics</b>
+                    <li><a href="https://shop.venturevalleymc.nl/category/vip" target="_blank">VIP Rank</a></li>
+                    <li><a href="https://shop.venturevalleymc.nl/category/plus" target="_blank">Plus Rank</a></li>
+                    <li><a href="https://shop.venturevalleymc.nl/category/cosmetics" target="_blank">Cosmetics</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-container" data-mega="contact">
+            <div class="grid grid-cols-4 pb-2.5">
+                <ul class="list-none">
+                    <b>Contact</b>
+                    <li><a href="">Contact met VentureValley</a></li>
+                    <li><a href="">Veelgestelde Vragen</a></li>
+                    <li><a href="">Discord server</a></li>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">TikTok</a></li>
+                </ul>
+                <ul class="list-none">
+                    <b>Over VentureValley</b>
+                    <li><a href="">Ons verhaal</a></li>
+                    <li><a href="">Geschiedenis</a></li>
+                    <li><a href="">Het Team</a></li>
+                    <li><a href="">Werken bij VentureValley</a></li>
+                </ul>
+                <div class="flex items-center">
+                    <x-button url="https://wiki.venturevalleymc.nl" target="_black">
+                        Bekijk onze Wiki
+                    </x-button>
+                </div>
+            </div>
+        </div>
     </div>
 </nav>
 
@@ -46,7 +123,7 @@
     {{ $slot }}
 </main>
 
-<footer>
+<footer class="border-t border-solid border-[#E5E7EB]">
     <div class="footer-container">
         <div class="flex grow justify-between pb-2.5">
             <ul class="list-none">

@@ -25,7 +25,7 @@
                 achievements ontgrendelen en zoveel meer!</p>
         </div>
         <div>
-            <iframe src="https://youtube.com/embed/X3NhLQJaMgE" class="w-96 aspect-video rounded-3xl"
+            <iframe src="https://youtube.com/embed/X3NhLQJaMgE" class="w-96 aspect-video rounded-lg"
                     style="corner-shape: squircle"></iframe>
         </div>
     </section>

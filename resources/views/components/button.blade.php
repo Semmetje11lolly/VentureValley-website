@@ -2,11 +2,12 @@
     'variant' => 'primary',
     'size' => 'medium',
     'arrow' => 'right',
-    'url' => null
+    'url' => null,
+    'target' => '_self'
 ])
 
 @php
-    $baseClass = 'rounded-md inline-block font-semibold transition duration-250';
+    $baseClass = 'rounded-md inline-block font-semibold transition duration-250 h-fit';
 
     $variantClass = [
         'primary' => 'bg-[--button-primary-background-color] text-white hover:bg-[--button-primary-hover-background-color]',
@@ -23,7 +24,7 @@
 @endphp
 
 @if(!empty($url))
-    <a {{ $attributes->merge(['class' => $classes]) }} href="{{ $url }}"
+    <a {{ $attributes->merge(['class' => $classes]) }} href="{{ $url }}" target="{{ $target }}"
        style="font-family: 'Amaranth', sans-serif; corner-shape: scoop">
         @if($arrow === 'left')
             <i class="fa-solid fa-angle-left"></i>
