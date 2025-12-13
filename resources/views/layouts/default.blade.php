@@ -33,14 +33,19 @@
             <img src="{{ asset('/images/LogoFullBlue.png') }}" alt="">
         </a>
         <ul class="nav-headings">
-            <li tabindex="0" data-mega="ontdek">Ontdek VentureValley</li>
-            <li tabindex="0" data-mega="bezoek">Plan je bezoek</li>
-            <li tabindex="0" data-mega="contact">Contact & Over</li>
+            <li tabindex="0" data-mega="ontdek"
+                aria-expanded="false" aria-controls="mega-ontdek">Ontdek VentureValley
+            </li>
+            <li tabindex="0" data-mega="bezoek"
+                aria-expanded="false" aria-controls="mega-bezoek">Plan je bezoek
+            </li>
+            <li tabindex="0" data-mega="contact"
+                aria-expanded="false" aria-controls="mega-contact">Contact & Over
+            </li>
         </ul>
     </div>
     <div class="bg-[--body-background-color] border-t border-solid border-[#E5E7EB] py-5" id="mega-menu">
-        <div class="nav-container" data-mega="ontdek">
-            {{--<div class="flex grow justify-between pb-2.5">--}}
+        <div class="nav-container" data-mega="ontdek" id="mega-ontdek">
             <div class="grid grid-cols-4 pb-2.5">
                 <ul class="list-none">
                     <b>Pretpark</b>
@@ -72,7 +77,7 @@
                 </div>
             </div>
         </div>
-        <div class="nav-container" data-mega="bezoek">
+        <div class="nav-container" data-mega="bezoek" id="mega-bezoek">
             <div class="grid grid-cols-4 pb-2.5">
                 <ul class="list-none">
                     <b>Praktische Informatie</b>
@@ -88,9 +93,14 @@
                     <li><a href="https://shop.venturevalleymc.nl/category/plus" target="_blank">Plus Rank</a></li>
                     <li><a href="https://shop.venturevalleymc.nl/category/cosmetics" target="_blank">Cosmetics</a></li>
                 </ul>
+                <div class="flex items-center">
+                    <x-button url="https://discord.venturevalleymc.nl" target="_black">
+                        Join onze Discord
+                    </x-button>
+                </div>
             </div>
         </div>
-        <div class="nav-container" data-mega="contact">
+        <div class="nav-container" data-mega="contact" id="mega-contact">
             <div class="grid grid-cols-4 pb-2.5">
                 <ul class="list-none">
                     <b>Contact</b>

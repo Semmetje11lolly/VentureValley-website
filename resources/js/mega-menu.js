@@ -24,6 +24,43 @@ function init() {
     });
 
     megaMenu.addEventListener('mouseleave', hideMegaMenu);
+
+    setupKeyboard();
+}
+
+function setupKeyboard() {
+    headings.forEach(heading => {
+        heading.addEventListener('keydown', (e) => {
+            const key = e.key;
+            const megaKey = heading.dataset.mega;
+            const isOpen = heading.getAttribute('aria-expanded') === 'true';
+
+            if (key === 'Enter' || key === ' ') {
+                e.preventDefault();
+
+                if (isOpen) {
+                    hideMegaMenuImmediate();
+                } else {
+                    showMegaMenu(megaKey);
+                    focusFirstMegaItem(megaKey);
+                }
+            }
+        });
+    });
+
+    megaMenu.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            const openHeading = document.querySelector(
+                '.nav-headings li[aria-expanded="true"]'
+            );
+
+            if (openHeading) {
+                openHeading.focus();
+            }
+
+            hideMegaMenuImmediate();
+        }
+    });
 }
 
 function showMegaMenu(key) {
@@ -38,6 +75,10 @@ function showMegaMenu(key) {
             item.dataset.mega === key
         );
     });
+
+    headings.forEach(heading => {
+        heading.ariaExpanded = heading.dataset.mega === key;
+    })
 }
 
 function hideMegaMenu() {
@@ -45,6 +86,32 @@ function hideMegaMenu() {
         megaMenu.classList.remove('fade-in');
         megaMenu.classList.remove('active');
         megaItems.forEach(item => item.classList.remove('active'));
+        headings.forEach(heading =>
+            heading.setAttribute('aria-expanded', 'false')
+        );
     }, 100);
+}
+
+function hideMegaMenuImmediate() {
+    clearTimeout(hideTimeout);
+
+    megaMenu.classList.remove('fade-in');
+    megaMenu.classList.remove('active');
+    megaItems.forEach(item => item.classList.remove('active'));
+    headings.forEach(heading =>
+        heading.setAttribute('aria-expanded', 'false')
+    );
+}
+
+function focusFirstMegaItem(key) {
+    const activeMenu = megaMenu.querySelector(`.nav-container[data-mega="${key}"]`);
+
+    if (!activeMenu) return;
+
+    const focusable = activeMenu.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
+
+    if (focusable) {
+        focusable.focus();
+    }
 }
 
