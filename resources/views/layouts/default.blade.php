@@ -54,7 +54,7 @@
             <div class="grid grid-cols-4 pb-2.5">
                 <ul class="list-none">
                     <b>Pretpark</b>
-                    <li><a href="">Attracties</a></li>
+                    <li><a href="{{ route('attracties.index') }}">Attracties</a></li>
                     <li><a href="">Parkshows</a></li>
                     <li><a href="">Horeca</a></li>
                     <li><a href="">Souvenirs</a></li>
@@ -143,7 +143,7 @@
         <div class="flex grow justify-between pb-2.5">
             <ul class="list-none">
                 <b>Pretpark</b>
-                <li><a href="">Attracties</a></li>
+                <li><a href="{{ route('attracties.index') }}">Attracties</a></li>
                 <li><a href="">Openingstijden</a></li>
                 <li><a href="">Attracties in onderhoud</a></li>
                 <li><a href="">Bezoeken</a></li>
