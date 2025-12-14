@@ -179,27 +179,27 @@
             <div class="grow"></div>
             <ul class="flex list-none gap-2.5 text-[25px]">
                 <li>
-                    <a href="https://instagram.com/venturevalleymc" target="_blank">
+                    <a href="https://instagram.com/venturevalleymc" target="_blank" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="https://tiktok.com/@venturevalley" target="_blank">
+                    <a href="https://tiktok.com/@venturevalley" target="_blank" aria-label="TikTok">
                         <i class="fa-brands fa-tiktok"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.youtube.com/@venturevalley" target="_blank">
+                    <a href="https://www.youtube.com/@venturevalley" target="_blank" aria-label="YouTube">
                         <i class="fa-brands fa-youtube"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.twitch.tv/venturevalleymc" target="_blank">
+                    <a href="https://www.twitch.tv/venturevalleymc" target="_blank" aria-label="Twitch">
                         <i class="fa-brands fa-twitch"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="https://discord.venturevalleymc.nl" target="_blank">
+                    <a href="https://discord.venturevalleymc.nl" target="_blank" aria-label="Discord">
                         <i class="fa-brands fa-discord"></i>
                     </a>
                 </li>

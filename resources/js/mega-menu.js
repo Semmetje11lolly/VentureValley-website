@@ -36,16 +36,15 @@ function setupKeyboard() {
             const isOpen = heading.getAttribute('aria-expanded') === 'true';
 
             if (key === 'Enter' || key === ' ') {
-                e.preventDefault();
-
-                if (isOpen) {
-                    hideMegaMenuImmediate();
-                } else {
-                    showMegaMenu(megaKey);
-                    focusFirstMegaItem(megaKey);
-                }
+                toggleMegaMenu(e, isOpen, megaKey);
             }
         });
+        heading.addEventListener('click', (e) => {
+            const megaKey = heading.dataset.mega;
+            const isOpen = heading.getAttribute('aria-expanded') === 'true';
+
+            toggleMegaMenu(e, isOpen, megaKey);
+        })
     });
 
     megaMenu.addEventListener('keydown', (e) => {
@@ -61,6 +60,17 @@ function setupKeyboard() {
             hideMegaMenuImmediate();
         }
     });
+}
+
+function toggleMegaMenu(e, isOpen, megaKey) {
+    e.preventDefault();
+
+    if (isOpen) {
+        hideMegaMenuImmediate();
+    } else {
+        showMegaMenu(megaKey);
+        focusFirstMegaItem(megaKey);
+    }
 }
 
 function showMegaMenu(key) {
