@@ -19,7 +19,7 @@
     $classes = $baseClass . ' ' . $heightClass[$height];
 @endphp
 
-<header {{ $attributes->merge(['class' => $classes]) }} @if(!empty($image)) style="{{ $imageClass }}" @endif>
+<header {{ $attributes->merge(['class' => $classes]) }} @if(!empty($image)) style="{{ $imageClass }}" @endif id="main">
     <div class="max-w-xl mx-auto">
         {{ $slot }}
     </div>

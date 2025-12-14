@@ -7,7 +7,7 @@
 ])
 
 @php
-    $baseClass = 'rounded-md inline-block font-semibold transition duration-250 h-fit';
+    $baseClass = 'rounded-md inline-block font-semibold transition duration-250 h-fit text-center';
 
     $variantClass = [
         'primary' => 'bg-[--button-primary-background-color] text-white hover:bg-[--button-primary-hover-background-color]',

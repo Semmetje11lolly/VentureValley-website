@@ -19,6 +19,11 @@
 
 <body>
 
+<x-button url="{{ url('#main') }}"
+          class="absolute top-0 left-0 z-[999] opacity-0 pointer-events-none -translate-y-96 transition-none mt-5 ml-5 focus:opacity-100 focus:pointer-events-auto focus:translate-y-0">
+    Naar hoofdinhoud
+</x-button>
+
 <nav>
     @can('admin')
         <div class="bg-gray-900 text-white py-3">
@@ -129,7 +134,7 @@
 
 {{ $header ?? '' }}
 
-<main>
+<main @if(empty($header)) id="main" @endif>
     {{ $slot }}
 </main>
 
