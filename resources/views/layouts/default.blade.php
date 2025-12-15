@@ -37,7 +37,7 @@
         <a href="{{ route('home') }}" aria-label="Home">
             <img src="{{ asset('/images/LogoFullBlue.png') }}" alt="">
         </a>
-        <ul class="nav-headings">
+        <ul class="nav-headings max-sm:!hidden">
             <li tabindex="0" data-mega="ontdek"
                 aria-expanded="false" aria-controls="mega-ontdek">Ontdek VentureValley
             </li>
@@ -48,8 +48,12 @@
                 aria-expanded="false" aria-controls="mega-contact">Contact & Over
             </li>
         </ul>
+        {{--TODO: Make the mobile button actually do something--}}
+        <div class="text-3xl py-5 sm:!hidden">
+            <i tabindex="0" aria-expanded="false" class="fa-solid fa-bars"></i>
+        </div>
     </div>
-    <div class="bg-[--body-background-color] border-t border-solid border-[#E5E7EB] py-5" id="mega-menu">
+    <div class="bg-[--body-background-color] border-t border-solid border-[#E5E7EB] py-5 max-sm:!hidden" id="mega-menu">
         <div class="nav-container" data-mega="ontdek" id="mega-ontdek">
             <div class="grid grid-cols-4 pb-2.5">
                 <ul class="list-none">
@@ -140,7 +144,8 @@
 
 <footer class="border-t border-solid border-[#E5E7EB]">
     <div class="footer-container">
-        <div class="flex grow justify-between pb-2.5">
+        {{--TODO: Add accordions with <details> for mobile footer--}}
+        <div class="flex grow justify-between pb-2.5 max-sm:!hidden">
             <ul class="list-none">
                 <b>Pretpark</b>
                 <li><a href="{{ route('attracties.index') }}">Attracties</a></li>
@@ -169,7 +174,8 @@
             </ul>
         </div>
         <hr>
-        <div class="flex grow items-center justify-between gap-14 text-[12px]">
+        <div class="flex grow items-center justify-between gap-14 text-[12px]
+                    max-sm:flex-col max-sm:gap-4 max-sm:text-center">
             <div class="flex flex-col">
                 © Copyright {{ date('Y') }} VentureValley
                 <i>Wij zijn geen onderdeel van Mojang AB.</i>
@@ -181,7 +187,7 @@
                 <li>•</li>
                 <li><a href="">Contact</a></li>
             </ul>
-            <div class="grow"></div>
+            <div class="grow max-sm:!hidden"></div>
             <ul class="flex list-none gap-2.5 text-[25px]">
                 <li>
                     <a href="https://instagram.com/venturevalleymc" target="_blank" aria-label="Instagram">

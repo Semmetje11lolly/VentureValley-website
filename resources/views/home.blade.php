@@ -16,7 +16,8 @@
         </x-button>
     </x-header-card>
 
-    <section class="flex gap-5 py-14">
+    <section class="flex gap-5 py-14
+                    max-sm:flex-col">
         <div class="flex flex-col items-center justify-center text-center">
             <h2>Hét virtuele dagje uit in Minecraft!</h2>
             <p>Houd jij van ruige achtbanen of heb je toch liever een rustige darkride? Meedoen aan een evenement of een
@@ -24,30 +25,31 @@
                 gemaakt in Minecraft. Je kunt verschillende attracties bezoeken, souvenirs kopen in winkeltjes,
                 achievements ontgrendelen en zoveel meer!</p>
         </div>
-        <div>
-            <iframe src="https://youtube.com/embed/X3NhLQJaMgE" class="w-[450px] aspect-video rounded-lg"
+        <div style="margin: 0 auto">
+            <iframe src="https://youtube.com/embed/X3NhLQJaMgE"
+                    class="w-[450px] aspect-video rounded-lg max-sm:w-[90vw]"
                     style="corner-shape: squircle"></iframe>
         </div>
     </section>
 
     <section class="pb-14">
-        <div class="grid grid-cols-3 gap-5">
+        <div class="grid grid-cols-3 gap-5 max-sm:grid-cols-1">
             <a href="https://discord.venturevalleymc.nl">
                 <article
-                    class="flex flex-col justify-end min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg text-center pb-4 transition duration-500 hover:scale-[0.975]"
+                    class="flex flex-col justify-end min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg text-center pb-4 px-1 transition duration-500 hover:scale-[0.975]"
                     style="background-image: url({{ asset('/images/EntranceWithForest.jpg') }}); box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); corner-shape: scoop">
                     <h2 class="text-5xl text-white">Betreed onze Discord</h2>
                 </article>
             </a>
             <a href="{{ route('attracties.index') }}">
                 <article
-                    class="flex flex-col justify-end min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg text-center pb-4 transition duration-500 hover:scale-[0.975]"
+                    class="flex flex-col justify-end min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg text-center pb-4 px-1 transition duration-500 hover:scale-[0.975]"
                     style="background-image: url({{ asset('/images/HeaderRides.jpg') }}); box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); corner-shape: scoop">
                     <h2 class="text-5xl text-white">Bekijk onze Attracties</h2>
                 </article>
             </a>
             <article
-                class="flex flex-col justify-end min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg text-center pb-4 transition duration-500 hover:scale-[0.975]"
+                class="flex flex-col justify-end min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg text-center pb-4 px-1 transition duration-500 hover:scale-[0.975]"
                 style="background-image: url({{ asset('/images/HeaderTeam.jpg') }}); box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); corner-shape: scoop">
                 <h2 class="text-5xl text-white">Versterk ons Team</h2>
             </article>
