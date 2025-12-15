@@ -76,7 +76,7 @@
                     <li><a href="">Werken bij VentureValley</a></li>
                 </ul>
                 <div class="flex items-center">
-                    <x-button url="https://shop.venturevalleymc.nl" target="_black">
+                    <x-button url="https://shop.venturevalleymc.nl" target="_blank">
                         Bezoek Webshop
                     </x-button>
                 </div>
@@ -99,7 +99,7 @@
                     <li><a href="https://shop.venturevalleymc.nl/category/cosmetics" target="_blank">Cosmetics</a></li>
                 </ul>
                 <div class="flex items-center">
-                    <x-button url="https://discord.venturevalleymc.nl" target="_black">
+                    <x-button url="https://discord.venturevalleymc.nl" target="_blank">
                         Join onze Discord
                     </x-button>
                 </div>
@@ -123,7 +123,7 @@
                     <li><a href="">Werken bij VentureValley</a></li>
                 </ul>
                 <div class="flex items-center">
-                    <x-button url="https://wiki.venturevalleymc.nl" target="_black">
+                    <x-button url="https://wiki.venturevalleymc.nl" target="_blank">
                         Bekijk onze Wiki
                     </x-button>
                 </div>
@@ -176,9 +176,9 @@
             </div>
             <ul class="flex list-none gap-2.5">
                 <li><a href="">Privacybeleid</a></li>
-                •
+                <li>•</li>
                 <li><a href="">Parkreglement</a></li>
-                •
+                <li>•</li>
                 <li><a href="">Contact</a></li>
             </ul>
             <div class="grow"></div>

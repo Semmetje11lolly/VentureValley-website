@@ -31,23 +31,26 @@
     </section>
 
     <section class="pb-14">
-        <ul class="grid grid-cols-3 gap-5">
+        <div class="grid grid-cols-3 gap-5">
             <a href="https://discord.venturevalleymc.nl">
-                <li class="flex flex-col justify-end min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg text-center pb-4 transition duration-500 hover:scale-[0.975]"
+                <article
+                    class="flex flex-col justify-end min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg text-center pb-4 transition duration-500 hover:scale-[0.975]"
                     style="background-image: url({{ asset('/images/EntranceWithForest.jpg') }}); box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); corner-shape: scoop">
                     <h2 class="text-5xl text-white">Betreed onze Discord</h2>
-                </li>
+                </article>
             </a>
             <a href="{{ route('attracties.index') }}">
-                <li class="flex flex-col justify-end min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg text-center pb-4 transition duration-500 hover:scale-[0.975]"
+                <article
+                    class="flex flex-col justify-end min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg text-center pb-4 transition duration-500 hover:scale-[0.975]"
                     style="background-image: url({{ asset('/images/HeaderRides.jpg') }}); box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); corner-shape: scoop">
                     <h2 class="text-5xl text-white">Bekijk onze Attracties</h2>
-                </li>
+                </article>
             </a>
-            <li class="flex flex-col justify-end min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg text-center pb-4 transition duration-500 hover:scale-[0.975]"
+            <article
+                class="flex flex-col justify-end min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg text-center pb-4 transition duration-500 hover:scale-[0.975]"
                 style="background-image: url({{ asset('/images/HeaderTeam.jpg') }}); box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); corner-shape: scoop">
                 <h2 class="text-5xl text-white">Versterk ons Team</h2>
-            </li>
-        </ul>
+            </article>
+        </div>
     </section>
 </x-default-layout>
