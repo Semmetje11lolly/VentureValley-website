@@ -228,7 +228,6 @@
 
 <footer class="border-t border-solid border-[#E5E7EB]">
     <div class="footer-container">
-        {{--TODO: Add accordions with <details> for mobile footer--}}
         <div class="flex grow justify-between pb-2.5 max-sm:!hidden">
             <ul class="list-none">
                 <b>Pretpark</b>
@@ -257,7 +256,43 @@
                 <li><a href="https://shop.venturevalleymc.nl/category/cosmetics" target="_blank">Cosmetics</a></li>
             </ul>
         </div>
-        <hr>
+        <div class="flex flex-col pb-2.5 sm:!hidden">
+            <details>
+                <summary>Pretpark</summary>
+                <ul class="list-none">
+                    <li><a href="{{ route('attracties.index') }}">Attracties</a></li>
+                    <li><a href="">Openingstijden</a></li>
+                    <li><a href="">Attracties in onderhoud</a></li>
+                    <li><a href="">Bezoeken</a></li>
+                </ul>
+            </details>
+            <details>
+                <summary>Over VentureValley</summary>
+                <ul class="list-none">
+                    <li><a href="">Ons verhaal</a></li>
+                    <li><a href="">Geschiedenis</a></li>
+                    <li><a href="">Het Team</a></li>
+                    <li><a href="">Werken bij VentureValley</a></li>
+                </ul>
+            </details>
+            <details>
+                <summary>Meer VentureValley</summary>
+                <ul class="list-none">
+                    <li><a href="">VentureValley Blog</a></li>
+                    <li><a href="">VentureValley App</a></li>
+                    <li><a href="">Creator-programma</a></li>
+                </ul>
+            </details>
+            <details>
+                <summary>Webshop</summary>
+                <ul class="list-none">
+                    <li><a href="https://shop.venturevalleymc.nl/category/vip" target="_blank">VIP Rank</a></li>
+                    <li><a href="https://shop.venturevalleymc.nl/category/plus" target="_blank">Plus Rank</a></li>
+                    <li><a href="https://shop.venturevalleymc.nl/category/cosmetics" target="_blank">Cosmetics</a></li>
+                </ul>
+            </details>
+        </div>
+        <hr class="max-sm:!hidden">
         <div class="flex grow items-center justify-between gap-14 text-[12px]
                     max-sm:flex-col max-sm:gap-4 max-sm:text-center">
             <div class="flex flex-col">

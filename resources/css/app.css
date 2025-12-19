@@ -200,19 +200,7 @@ nav #mobile-menu .nav-container {
 }
 
 nav #mobile-menu .nav-container.active {
-    display: block;
-}
-
-nav #mobile-menu details {
-    border-top: 1px solid #E5E7EB;
-    border-bottom: 1px solid #E5E7EB;
-
-    width: 100%;
-    padding: 10px 0;
-}
-
-nav #mobile-menu details + details {
-    border-top: none;
+    display: flex;
 }
 
 footer {
@@ -229,4 +217,16 @@ footer .footer-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 12px 12px 0;
+}
+
+details {
+    border-top: 1px solid #E5E7EB;
+    border-bottom: 1px solid #E5E7EB;
+
+    width: 100%;
+    padding: 10px 0;
+}
+
+details + details {
+    border-top: none;
 }
