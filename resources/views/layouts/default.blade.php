@@ -50,7 +50,6 @@
                 aria-expanded="false" aria-controls="mega-contact">Contact & Over
             </li>
         </ul>
-        {{--TODO: Make the mobile button actually do something--}}
         <div class="text-3xl py-5 sm:!hidden">
             <i tabindex="0" role="button" aria-label="Open Menu" aria-expanded="false" aria-controls="mobile-menu"
                class="fa-solid fa-bars"
@@ -140,76 +139,83 @@
     </div>
     <div class="bg-[--body-background-color] border-t border-solid border-[#E5E7EB] py-5 sm:!hidden"
          id="mobile-menu">
-        <div class="nav-container !flex-col !items-start !gap-2">
-            <h2 class="text-2xl text-[--text-color]">Ontdek VentureValley</h2>
-            <details>
-                <summary>Pretpark</summary>
-                <ul class="list-none">
-                    <li><a href="{{ route('attracties.index') }}">Attracties</a></li>
-                    <li><a href="">Parkshows</a></li>
-                    <li><a href="">Horeca</a></li>
-                    <li><a href="">Souvenirs</a></li>
-                    <li><a href="">Plattegrond</a></li>
-                </ul>
-            </details>
-            <details>
-                <summary>Recente Evenementen</summary>
-                <ul class="list-none">
-                    <li><a href="">Halloween 2025</a></li>
-                    <li><a href="">1e verjaardag</a></li>
-                    <li><a href="">Wavebreaker Opening</a></li>
-                    <li><a href="">Halloween 2024</a></li>
-                    <li><a href="">De Grote Opening</a></li>
-                </ul>
-            </details>
-            <details>
-                <summary>Meer VentureValley</summary>
-                <ul class="list-none">
-                    <li><a href="">VentureValley Blog</a></li>
-                    <li><a href="">VentureValley App</a></li>
-                    <li><a href="">Creator-programma</a></li>
-                    <li><a href="">Werken bij VentureValley</a></li>
-                </ul>
-            </details>
-            <h2 class="text-2xl text-[--text-color]">Plan je bezoek</h2>
-            <details>
-                <summary>Praktische Informatie</summary>
-                <ul class="list-none">
-                    <li><a href="">Bezoeken</a></li>
-                    <li><a href="">Openingstijden</a></li>
-                    <li><a href="">Plattegrond</a></li>
-                    <li><a href="">Onderhoudskalender</a></li>
-                    <li><a href="">Parkreglement</a></li>
-                </ul>
-            </details>
-            <details>
-                <summary>Ranks & Cosmetics</summary>
-                <ul class="list-none">
-                    <li><a href="https://shop.venturevalleymc.nl/category/vip" target="_blank">VIP Rank</a></li>
-                    <li><a href="https://shop.venturevalleymc.nl/category/plus" target="_blank">Plus Rank</a></li>
-                    <li><a href="https://shop.venturevalleymc.nl/category/cosmetics" target="_blank">Cosmetics</a></li>
-                </ul>
-            </details>
-            <h2 class="text-2xl text-[--text-color]">Contact & Over</h2>
-            <details>
-                <summary>Contact</summary>
-                <ul class="list-none">
-                    <li><a href="">Contact met VentureValley</a></li>
-                    <li><a href="">Veelgestelde Vragen</a></li>
-                    <li><a href="https://discord.venturevalleymc.nl" target="_blank">Discord server</a></li>
-                    <li><a href="https://instagram.com/venturevalleymc" target="_blank">Instagram</a></li>
-                    <li><a href="https://tiktok.com/@venturevalley" target="_blank">TikTok</a></li>
-                </ul>
-            </details>
-            <details>
-                <summary>Over VentureValley</summary>
-                <ul class="list-none">
-                    <li><a href="">Ons verhaal</a></li>
-                    <li><a href="">Geschiedenis</a></li>
-                    <li><a href="">Het Team</a></li>
-                    <li><a href="">Werken bij VentureValley</a></li>
-                </ul>
-            </details>
+        <div class="nav-container !flex-col !items-start !gap-7">
+            <div class="w-full">
+                <h2 class="text-2xl text-[--text-color]">Ontdek VentureValley</h2>
+                <details>
+                    <summary>Pretpark</summary>
+                    <ul class="list-none">
+                        <li><a href="{{ route('attracties.index') }}">Attracties</a></li>
+                        <li><a href="">Parkshows</a></li>
+                        <li><a href="">Horeca</a></li>
+                        <li><a href="">Souvenirs</a></li>
+                        <li><a href="">Plattegrond</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Recente Evenementen</summary>
+                    <ul class="list-none">
+                        <li><a href="">Halloween 2025</a></li>
+                        <li><a href="">1e verjaardag</a></li>
+                        <li><a href="">Wavebreaker Opening</a></li>
+                        <li><a href="">Halloween 2024</a></li>
+                        <li><a href="">De Grote Opening</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Meer VentureValley</summary>
+                    <ul class="list-none">
+                        <li><a href="">VentureValley Blog</a></li>
+                        <li><a href="">VentureValley App</a></li>
+                        <li><a href="">Creator-programma</a></li>
+                        <li><a href="">Werken bij VentureValley</a></li>
+                    </ul>
+                </details>
+            </div>
+            <div class="w-full">
+                <h2 class="text-2xl text-[--text-color]">Plan je bezoek</h2>
+                <details>
+                    <summary>Praktische Informatie</summary>
+                    <ul class="list-none">
+                        <li><a href="">Bezoeken</a></li>
+                        <li><a href="">Openingstijden</a></li>
+                        <li><a href="">Plattegrond</a></li>
+                        <li><a href="">Onderhoudskalender</a></li>
+                        <li><a href="">Parkreglement</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Ranks & Cosmetics</summary>
+                    <ul class="list-none">
+                        <li><a href="https://shop.venturevalleymc.nl/category/vip" target="_blank">VIP Rank</a></li>
+                        <li><a href="https://shop.venturevalleymc.nl/category/plus" target="_blank">Plus Rank</a></li>
+                        <li><a href="https://shop.venturevalleymc.nl/category/cosmetics" target="_blank">Cosmetics</a>
+                        </li>
+                    </ul>
+                </details>
+            </div>
+            <div class="w-full">
+                <h2 class="text-2xl text-[--text-color]">Contact & Over</h2>
+                <details>
+                    <summary>Contact</summary>
+                    <ul class="list-none">
+                        <li><a href="">Contact met VentureValley</a></li>
+                        <li><a href="">Veelgestelde Vragen</a></li>
+                        <li><a href="https://discord.venturevalleymc.nl" target="_blank">Discord server</a></li>
+                        <li><a href="https://instagram.com/venturevalleymc" target="_blank">Instagram</a></li>
+                        <li><a href="https://tiktok.com/@venturevalley" target="_blank">TikTok</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Over VentureValley</summary>
+                    <ul class="list-none">
+                        <li><a href="">Ons verhaal</a></li>
+                        <li><a href="">Geschiedenis</a></li>
+                        <li><a href="">Het Team</a></li>
+                        <li><a href="">Werken bij VentureValley</a></li>
+                    </ul>
+                </details>
+            </div>
         </div>
     </div>
 </nav>

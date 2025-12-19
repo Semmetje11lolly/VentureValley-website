@@ -42,6 +42,8 @@ function openMobileMenu() {
     document.body.classList.add('scroll-lock');
 
     mobileToggle.setAttribute('aria-expanded', 'true');
+    mobileToggle.classList.remove('fa-bars');
+    mobileToggle.classList.add('fa-xmark');
 }
 
 function closeMobileMenu() {
@@ -49,4 +51,6 @@ function closeMobileMenu() {
     document.body.classList.remove('scroll-lock');
 
     mobileToggle.setAttribute('aria-expanded', 'false');
+    mobileToggle.classList.remove('fa-xmark');
+    mobileToggle.classList.add('fa-bars');
 }
