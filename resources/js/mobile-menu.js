@@ -2,10 +2,12 @@ window.addEventListener('DOMContentLoaded', init);
 
 let mobileToggle;
 let mobileMenu;
+let navContainer;
 
 function init() {
     mobileToggle = document.querySelector('#mobile-menu-toggle');
     mobileMenu = document.querySelector('#mobile-menu');
+    navContainer = mobileMenu.querySelector('.nav-container');
 
     mobileToggle.addEventListener('click', toggleMobileMenu);
 
@@ -39,6 +41,7 @@ function toggleMobileMenu() {
 
 function openMobileMenu() {
     mobileMenu.classList.add('active');
+    navContainer.classList.add('active');
     document.body.classList.add('scroll-lock');
 
     mobileToggle.setAttribute('aria-expanded', 'true');
@@ -48,6 +51,7 @@ function openMobileMenu() {
 
 function closeMobileMenu() {
     mobileMenu.classList.remove('active');
+    navContainer.classList.remove('active');
     document.body.classList.remove('scroll-lock');
 
     mobileToggle.setAttribute('aria-expanded', 'false');

@@ -195,6 +195,14 @@ nav #mobile-menu.active {
     z-index: 999;
 }
 
+nav #mobile-menu .nav-container {
+    display: none;
+}
+
+nav #mobile-menu .nav-container.active {
+    display: block;
+}
+
 nav #mobile-menu details {
     border-top: 1px solid #E5E7EB;
     border-bottom: 1px solid #E5E7EB;
