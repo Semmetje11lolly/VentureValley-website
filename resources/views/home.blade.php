@@ -1,7 +1,7 @@
 <x-default-layout title="VentureValley • Minecraft Pretpark">
     <x-slot name="header">
         <x-header height="large" class="bg-top pb-10">
-            <h1>Beleef de gaafste attracties voor jong en oud in VentureValley</h1>
+            <h1 class="max-sm:text-5xl">Beleef de gaafste attracties voor jong en oud in VentureValley</h1>
             <x-button variant="transparent" url="{{ route('attracties.index') }}" class="mt-5">
                 Bekijk alle Attracties
             </x-button>
