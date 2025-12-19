@@ -257,7 +257,7 @@
             </ul>
         </div>
         <div class="flex flex-col pb-2.5 sm:!hidden">
-            <details>
+            <details name="footer">
                 <summary>Pretpark</summary>
                 <ul class="list-none">
                     <li><a href="{{ route('attracties.index') }}">Attracties</a></li>
@@ -266,7 +266,7 @@
                     <li><a href="">Bezoeken</a></li>
                 </ul>
             </details>
-            <details>
+            <details name="footer">
                 <summary>Over VentureValley</summary>
                 <ul class="list-none">
                     <li><a href="">Ons verhaal</a></li>
@@ -275,7 +275,7 @@
                     <li><a href="">Werken bij VentureValley</a></li>
                 </ul>
             </details>
-            <details>
+            <details name="footer">
                 <summary>Meer VentureValley</summary>
                 <ul class="list-none">
                     <li><a href="">VentureValley Blog</a></li>
@@ -283,7 +283,7 @@
                     <li><a href="">Creator-programma</a></li>
                 </ul>
             </details>
-            <details>
+            <details name="footer">
                 <summary>Webshop</summary>
                 <ul class="list-none">
                     <li><a href="https://shop.venturevalleymc.nl/category/vip" target="_blank">VIP Rank</a></li>
