@@ -42,8 +42,6 @@ function setupFocusTrap() {
     lastFocusLink = focusableLinks[focusableLinks.length - 1];
 
     mobileMenu.addEventListener('keydown', handleFocusTrap);
-
-    console.log(lastFocusSummary.parentNode.getAttribute('open'));
 }
 
 function toggleMobileMenu() {
@@ -76,6 +74,10 @@ function closeMobileMenu() {
     mobileToggle.setAttribute('aria-expanded', 'false');
     mobileToggle.classList.remove('fa-xmark');
     mobileToggle.classList.add('fa-bars');
+
+    focusableSummaries.forEach(summary => {
+        summary.parentNode.removeAttribute('open');
+    });
 
     mobileMenu.removeEventListener('keydown', handleFocusTrap);
 }
