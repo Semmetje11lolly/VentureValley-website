@@ -18,6 +18,7 @@ Route::get('/', [HomeController::class, 'show'])
     ->name('home');
 
 Route::resource('/attracties', RideController::class)
+    ->parameters(['attracties' => 'ride'])
     ->middleware('auth')
     ->withoutMiddlewareFor(['index', 'show'], 'auth');
 

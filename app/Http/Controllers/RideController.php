@@ -14,7 +14,7 @@ class RideController extends Controller
     {
         $rides = Ride::all();
 
-        return view('ridex.index', compact('rides'));
+        return view('rides.index', compact('rides'));
     }
 
     /**
@@ -38,7 +38,11 @@ class RideController extends Controller
      */
     public function show(Ride $ride)
     {
-        return view('rides.show', compact('ride'));
+        $rides = Ride::inRandomOrder()
+            ->take(3)
+            ->get();
+
+        return view('rides.show', compact('ride', 'rides'));
     }
 
     /**
