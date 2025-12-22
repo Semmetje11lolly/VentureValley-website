@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ride;
 use Illuminate\Http\Request;
 
 class RideController extends Controller
@@ -11,7 +12,9 @@ class RideController extends Controller
      */
     public function index()
     {
-        return view('ridex.index');
+        $rides = Ride::all();
+
+        return view('ridex.index', compact('rides'));
     }
 
     /**
@@ -33,9 +36,9 @@ class RideController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Ride $ride)
     {
-        //
+        return view('rides.show', compact('ride'));
     }
 
     /**
