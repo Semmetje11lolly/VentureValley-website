@@ -19,7 +19,7 @@
         ])->filter(fn($stat) => filled($stat['value']))
           ->take(4)
           ->map(function ($stat) {
-              if ($stat['title'] === 'Duration') {
+              if ($stat['title'] === 'Ritduur') {
                   $minutes = intdiv($stat['value'], 60);
                   $seconds = $stat['value'] % 60;
                   $stat['value'] = "{$minutes}:" . str_pad($seconds, 2, '0', STR_PAD_LEFT);
