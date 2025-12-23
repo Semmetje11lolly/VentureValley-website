@@ -1,4 +1,4 @@
-<x-default-layout>
+<x-default-layout title="{{ $ride->name }} • VentureValley">
     <x-slot name="header">
         <x-header height="large" image="{{ asset($ride->background_image) }}">
             <span class="font-[Amaranth] text-lg">{{ strtoupper($ride->name) }} ✦ {{ strtoupper($ride->type) }}</span>
@@ -49,7 +49,33 @@
 
     <section class="text-center pb-14">
         <h2>Goed om te weten</h2>
-        <p>Hier komt ultra coole content!</p>
+        <div class="grid grid-cols-3 gap-5 max-sm:grid-cols-1 bg-white p-5 rounded-lg"
+             style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25); corner-shape: squircle">
+            @if($ride->property_controllable)
+                <div class="flex gap-5 items-center">
+                    <img src="{{ asset('/images/IconControllable.png') }}" alt="" class="w-20">
+                    <p class="text-sm">Deze attractie is bestuurbaar door VIP's. Open poortjes, sluit beugels, geef
+                        treinen vrij en
+                        meer.</p>
+                </div>
+            @endif
+            @if($ride->property_audio)
+                <div class="flex gap-5 items-center">
+                    <img src="{{ asset('/images/IconAudio.png') }}" alt="" class="w-20">
+                    <p class="text-sm">Wanneer je verbonden bent met onze Audio Server, kun je in en om deze attractie
+                        muziek en geluid
+                        horen!</p>
+                </div>
+            @endif
+            @if($ride->property_smoothcoasters)
+                <div class="flex gap-5 items-center">
+                    <img src="{{ asset('/images/IconSmoothcoasters.png') }}" alt="" class="w-20">
+                    <p class="text-sm">Als je de SmoothCoasters-mod gebruikt, beweegt je camera mee met de trein in
+                        bijvoorbeeld
+                        loopings.</p>
+                </div>
+            @endif
+        </div>
     </section>
 
     <section class="text-center pb-14">

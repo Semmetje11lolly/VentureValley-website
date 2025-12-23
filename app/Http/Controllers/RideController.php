@@ -38,7 +38,8 @@ class RideController extends Controller
      */
     public function show(Ride $ride)
     {
-        $rides = Ride::inRandomOrder()
+        $rides = Ride::where('id', '!=', $ride->id)
+            ->inRandomOrder()
             ->take(3)
             ->get();
 

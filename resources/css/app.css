@@ -219,6 +219,12 @@ footer .footer-container {
     padding: 12px 12px 0;
 }
 
+.grid > :only-child {
+    @media (width > 640px) {
+        grid-column: 2;
+    }
+}
+
 details {
     border-top: 1px solid #E5E7EB;
     border-bottom: 1px solid #E5E7EB;
