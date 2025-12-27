@@ -3,7 +3,7 @@ The official website of VentureValley, a Dutch Minecraft Theme Park server.
 
 :globe_with_meridians: Check out the current progress of the rebuild: https://testing.venturevalleymc.nl
 
-<details open>
+<details>
     <summary>Table of Contents</summary>
     <ol>
         <li><a href="#information_source-about-this-project">About this project</a></li>
@@ -32,28 +32,37 @@ The official website of VentureValley, a Dutch Minecraft Theme Park server.
 
 
 ## :information_source: About this project
+The VentureValley website is the place to be for everything VentureValley! From instructions on how to join to an overview of all the attractions, it's all in one place!
+
+This project was created because the old VentureValley website was built with WordPress and Elementor, which made it difficult and costly to maintain. The goal for the new website is to gain full control over it by rebuilding it from scratch with Laravel.
 
 
 
 ## :sparkles: Functionality
+W.I.P.
 
 
 
 ## :rocket: Getting started
 
 ### Requirements
+W.I.P.
 
 ### Installation
+W.I.P.
 
 
 
 ## :hammer_and_wrench: How does it work?
 
 ### Technologies
+W.I.P.
 
 ### Entity Relationship Diagram
+W.I.P.
 
 ### Usage
+W.I.P.
 
 
 
