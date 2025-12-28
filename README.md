@@ -44,19 +44,50 @@ W.I.P.
 
 
 ## :rocket: Getting started
+Below are the instructions on how to get the project running on your local machine!
 
 ### Requirements
-W.I.P.
+- PHP 8.2+
+- Composer
+- Node.js & NPM
+- SQLite
+- (If on Windows) Laravel Herd
 
 ### Installation
-W.I.P.
+1. Clone the repository
+```sh
+git clone https://github.com/Semmetje11lolly/VentureValley-website.git vv-website
+cd vv-website
+```
+2. Setup dependencies, environment, database and front-end assets
+```sh
+composer run setup
+```
+3. Setup local test server
+```sh
+npm run dev
+```
+- If you're using Windows:
+    - Make sure the project is in the Laravel Herd sites directory and SSL is enabled for it
+    - View the web-app by going to https://detective-green.test
+- If you're not on Windows:
+    - ```sh
+      php artisan serve
+      ```
+    - View the web-app by going to http://localhost:8000
 
 
 
 ## :hammer_and_wrench: How does it work?
+Below you can find the documentation of the VentureValley website codebase!
 
 ### Technologies
-W.I.P.
+The VentureValley website uses the following technologies:
+- [![Laravel][Laravel.com]][Laravel-url]
+    - [![Blade][Blade.com]][Blade-url]
+    - [![Laravel Breeze][Breeze.com]][Breeze-url]
+- [![Tailwind CSS][TailwindCSS.com]][TailwindCSS-url]
+- [![JavaScript][JavaScript.com]][JavaScript-url]
 
 ### Entity Relationship Diagram
 W.I.P.
@@ -70,3 +101,16 @@ W.I.P.
 The source code in this repository is licensed under the MIT License.
 
 However, all non-code assets (such as images, logos, and other media) are **not** covered by the MIT License. Unless otherwise stated, these assets may not be reused, redistributed, or modified without explicit permission from VentureValley.
+
+
+
+[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
+[Laravel-url]: https://laravel.com
+[TailwindCSS.com]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
+[TailwindCSS-url]: https://tailwindcss.com
+[JavaScript.com]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+[JavaScript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[Blade.com]: https://img.shields.io/badge/Blade-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
+[Blade-url]: https://laravel.com/docs/blade
+[Breeze.com]: https://img.shields.io/badge/Breeze-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
+[Breeze-url]: https://laravel.com/docs/starter-kits#laravel-breeze
