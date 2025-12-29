@@ -69,7 +69,7 @@ npm run dev
 ```
 - If you're using Windows:
     - Make sure the project is in the Laravel Herd sites directory and SSL is enabled for it
-    - View the web-app by going to https://detective-green.test
+    - View the web-app by going to https://vv-website.test
 - If you're not on Windows:
     - ```sh
       php artisan serve
