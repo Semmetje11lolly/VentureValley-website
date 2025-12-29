@@ -39,14 +39,10 @@
             </a>
         </div>
     </nav>
-    <main id="main">
+    <main class="max-w-none py-3" id="main">
         {{ $slot }}
     </main>
 </div>
-
-<footer>
-
-</footer>
 
 </body>
 

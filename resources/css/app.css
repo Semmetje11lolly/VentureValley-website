@@ -126,6 +126,8 @@ nav .nav-headings li {
     display: inline-block;
     position: relative;
 
+    cursor: pointer;
+
     padding: 28px 0;
 }
 
