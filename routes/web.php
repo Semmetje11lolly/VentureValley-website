@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RideController;
@@ -19,7 +20,12 @@ Route::get('/', [HomeController::class, 'show'])
 
 Route::resource('/attracties', RideController::class)
     ->parameters(['attracties' => 'ride'])
-    ->middleware('auth')
-    ->withoutMiddlewareFor(['index', 'show'], 'auth');
+    ->middleware('admin')
+    ->withoutMiddlewareFor(['index', 'show'], 'admin');
+
+Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', [AdminController::class, 'index'])
+        ->name('index');
+});
 
 require __DIR__ . '/auth.php';

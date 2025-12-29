@@ -30,7 +30,7 @@
     @can('admin')
         <div class="bg-gray-900 text-white py-3">
             <div class="nav-container">
-                <a href="">Dashboard</a>
+                <a href="{{ route('admin.index') }}">Dashboard</a>
                 <a href="{{ route('profile.edit') }}">Hey, {{ auth()->user()->name }}</a>
             </div>
         </div>
