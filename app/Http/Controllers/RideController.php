@@ -22,7 +22,7 @@ class RideController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.rides.create');
     }
 
     /**
@@ -65,8 +65,10 @@ class RideController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Ride $ride)
     {
-        //
+        $ride->delete();
+
+        return redirect()->route('admin.attracties');
     }
 }

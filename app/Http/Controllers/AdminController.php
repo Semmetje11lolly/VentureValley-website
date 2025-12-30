@@ -16,6 +16,6 @@ class AdminController extends Controller
     {
         $rides = Ride::all();
 
-        return view('admin.rides', compact('rides'));
+        return view('admin.rides.index', compact('rides'));
     }
 }

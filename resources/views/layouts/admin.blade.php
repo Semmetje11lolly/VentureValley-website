@@ -26,20 +26,20 @@
     </div>
 </nav>
 
-<div class="flex grow">
+<div class="flex grow max-sm:flex-col">
     <nav class="bg-gray-900 text-white min-w-44">
-        <div class="admin-nav flex flex-col">
+        <div class="admin-nav flex flex-col overflow-x-auto max-sm:flex-row">
             <a href="{{ route('admin.index') }}"
-               class="px-2.5 py-2.5 @if(Route::currentRouteName() === "admin.index") font-semibold bg-[--color-primary] @endif">
+               class="flex-shrink-0 px-2.5 py-2.5 @if(Route::currentRouteName() === "admin.index") font-semibold bg-[--color-primary] @endif">
                 <i class="fa-solid fa-gauge"></i> Dashboard
             </a>
             <a href="{{ route('admin.attracties') }}"
-               class="px-2.5 py-2.5 @if(Route::currentRouteName() === "admin.attracties") font-semibold bg-[--color-primary] @endif">
+               class="flex-shrink-0 px-2.5 py-2.5 @if(Route::currentRouteName() === "admin.attracties") font-semibold bg-[--color-primary] @endif">
                 <i class="fa-solid fa-ticket"></i> Attracties
             </a>
         </div>
     </nav>
-    <main class="max-w-none px-5 py-3" id="main">
+    <main class="max-w-none px-5 py-3 max-sm:w-full" id="main">
         {{ $slot }}
     </main>
 </div>
