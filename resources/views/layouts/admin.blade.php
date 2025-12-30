@@ -27,14 +27,14 @@
 </nav>
 
 <div class="flex grow">
-    <nav class="bg-gray-900 text-white min-w-48">
-        <div class="flex flex-col">
+    <nav class="bg-gray-900 text-white min-w-44">
+        <div class="admin-nav flex flex-col">
             <a href="{{ route('admin.index') }}"
-               class="px-3 py-3 hover:underline @if(Route::currentRouteName() === "admin.index") font-semibold bg-[--color-primary] @endif">
+               class="px-2.5 py-2.5 @if(Route::currentRouteName() === "admin.index") font-semibold bg-[--color-primary] @endif">
                 <i class="fa-solid fa-gauge"></i> Dashboard
             </a>
             <a href=""
-               class="px-3 py-3 hover:underline @if(Route::currentRouteName() === "admin.rides") font-semibold bg-[--color-primary] @endif">
+               class="px-2.5 py-2.5 @if(Route::currentRouteName() === "admin.rides") font-semibold bg-[--color-primary] @endif">
                 <i class="fa-solid fa-ticket"></i> Attracties
             </a>
         </div>

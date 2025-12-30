@@ -1,6 +1,6 @@
 @props([
     'height' => 'medium',
-    'image' => asset('/images/HeaderDefault.jpg')
+    'image' => asset('/images/HeaderDefault.webp')
 ])
 
 @php

@@ -205,6 +205,16 @@ nav #mobile-menu .nav-container.active {
     display: flex;
 }
 
+nav .admin-nav a {
+    border: solid 2px transparent;
+
+    transition: border 0.25s;
+}
+
+nav .admin-nav a:hover {
+    border: solid 2px var(--color-white);
+}
+
 footer {
     font-size: 14px;
 
@@ -237,4 +247,20 @@ details {
 
 details + details {
     border-top: none;
+}
+
+.video-opener {
+    position: relative;
+}
+
+.video-opener .fa-circle-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    font-size: 5rem;
+    color: var(--color-white);
+
+    transform: translate(-50%, -50%);
+    pointer-events: none;
 }

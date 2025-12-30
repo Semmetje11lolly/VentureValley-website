@@ -230,27 +230,27 @@
     <div class="footer-container">
         <div class="flex grow justify-between pb-2.5 max-sm:!hidden">
             <ul class="list-none">
-                <b>Pretpark</b>
+                <li><b>Pretpark</b></li>
                 <li><a href="{{ route('attracties.index') }}">Attracties</a></li>
                 <li><a href="">Openingstijden</a></li>
                 <li><a href="">Attracties in onderhoud</a></li>
                 <li><a href="">Bezoeken</a></li>
             </ul>
             <ul class="list-none">
-                <b>Over VentureValley</b>
+                <li><b>Over VentureValley</b></li>
                 <li><a href="">Ons verhaal</a></li>
                 <li><a href="">Geschiedenis</a></li>
                 <li><a href="">Het Team</a></li>
                 <li><a href="">Werken bij VentureValley</a></li>
             </ul>
             <ul class="list-none">
-                <b>Meer VentureValley</b>
+                <li><b>Meer VentureValley</b></li>
                 <li><a href="">VentureValley Blog</a></li>
                 <li><a href="">VentureValley App</a></li>
                 <li><a href="">Creator-programma</a></li>
             </ul>
             <ul class="list-none">
-                <b>Webshop</b>
+                <li><b>Webshop</b></li>
                 <li><a href="https://shop.venturevalleymc.nl/category/vip" target="_blank">VIP Rank</a></li>
                 <li><a href="https://shop.venturevalleymc.nl/category/plus" target="_blank">Plus Rank</a></li>
                 <li><a href="https://shop.venturevalleymc.nl/category/cosmetics" target="_blank">Cosmetics</a></li>

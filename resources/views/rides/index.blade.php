@@ -1,6 +1,6 @@
 <x-default-layout title="Attracties • VentureValley">
     <x-slot name="header">
-        <x-header height="medium" image="{{ asset('/images/HeaderRides.jpg') }}">
+        <x-header height="medium" image="{{ asset('/images/HeaderRides.webp') }}">
             <h1>Attracties</h1>
         </x-header>
     </x-slot>
