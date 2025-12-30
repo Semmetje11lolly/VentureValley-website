@@ -28,11 +28,9 @@
 
 <nav>
     @can('admin')
-        <div class="bg-gray-900 text-white py-3">
-            <div class="nav-container">
-                <a href="{{ route('admin.index') }}">Dashboard</a>
-                <a href="{{ route('profile.edit') }}">Hey, {{ auth()->user()->name }}</a>
-            </div>
+        <div class="flex items-center justify-between bg-gray-900 text-white px-3 py-3">
+            <a href="{{ route('admin.index') }}">Dashboard</a>
+            <a href="{{ route('profile.edit') }}">Hey, {{ auth()->user()->name }}</a>
         </div>
     @endcan
     <div class="nav-container">
@@ -229,27 +227,27 @@
 <footer class="border-t border-solid border-[#E5E7EB]">
     <div class="footer-container">
         <div class="flex grow justify-between pb-2.5 max-sm:!hidden">
-            <ul class="list-none">
+            <ul class="flex flex-col gap-1 list-none">
                 <li><b>Pretpark</b></li>
                 <li><a href="{{ route('attracties.index') }}">Attracties</a></li>
                 <li><a href="">Openingstijden</a></li>
                 <li><a href="">Attracties in onderhoud</a></li>
                 <li><a href="">Bezoeken</a></li>
             </ul>
-            <ul class="list-none">
+            <ul class="flex flex-col gap-1 list-none">
                 <li><b>Over VentureValley</b></li>
                 <li><a href="">Ons verhaal</a></li>
                 <li><a href="">Geschiedenis</a></li>
                 <li><a href="">Het Team</a></li>
                 <li><a href="">Werken bij VentureValley</a></li>
             </ul>
-            <ul class="list-none">
+            <ul class="flex flex-col gap-1 list-none">
                 <li><b>Meer VentureValley</b></li>
                 <li><a href="">VentureValley Blog</a></li>
                 <li><a href="">VentureValley App</a></li>
                 <li><a href="">Creator-programma</a></li>
             </ul>
-            <ul class="list-none">
+            <ul class="flex flex-col gap-1 list-none">
                 <li><b>Webshop</b></li>
                 <li><a href="https://shop.venturevalleymc.nl/category/vip" target="_blank">VIP Rank</a></li>
                 <li><a href="https://shop.venturevalleymc.nl/category/plus" target="_blank">Plus Rank</a></li>

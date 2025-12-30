@@ -18,14 +18,20 @@ Route::middleware('auth')->group(function () {
 Route::get('/', [HomeController::class, 'show'])
     ->name('home');
 
-Route::resource('/attracties', RideController::class)
-    ->parameters(['attracties' => 'ride'])
-    ->middleware('admin')
-    ->withoutMiddlewareFor(['index', 'show'], 'admin');
+Route::resource('attracties', RideController::class)
+    ->only(['index', 'show'])
+    ->parameters(['attracties' => 'ride']);
 
 Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [AdminController::class, 'index'])
         ->name('index');
+
+    Route::get('attracties', [AdminController::class, 'rides'])
+        ->name('attracties');
+
+    Route::resource('attracties', RideController::class)
+        ->except(['index', 'show'])
+        ->parameters(['attracties' => 'ride']);
 });
 
 require __DIR__ . '/auth.php';

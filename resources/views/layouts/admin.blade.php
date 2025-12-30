@@ -33,13 +33,13 @@
                class="px-2.5 py-2.5 @if(Route::currentRouteName() === "admin.index") font-semibold bg-[--color-primary] @endif">
                 <i class="fa-solid fa-gauge"></i> Dashboard
             </a>
-            <a href=""
-               class="px-2.5 py-2.5 @if(Route::currentRouteName() === "admin.rides") font-semibold bg-[--color-primary] @endif">
+            <a href="{{ route('admin.attracties') }}"
+               class="px-2.5 py-2.5 @if(Route::currentRouteName() === "admin.attracties") font-semibold bg-[--color-primary] @endif">
                 <i class="fa-solid fa-ticket"></i> Attracties
             </a>
         </div>
     </nav>
-    <main class="max-w-none py-3" id="main">
+    <main class="max-w-none px-5 py-3" id="main">
         {{ $slot }}
     </main>
 </div>
