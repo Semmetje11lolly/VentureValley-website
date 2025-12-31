@@ -1,4 +1,4 @@
-<x-admin-layout>
+<x-admin-layout title="Attracties - Dashboard • VentureValley">
     <section>
         <div class="flex justify-between items-center pb-3.5">
             <h1 class="text-5xl text-[--color-primary] max-sm:text-4xl">Attracties</h1>

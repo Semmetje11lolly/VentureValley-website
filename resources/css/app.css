@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer base {
+    label {
+        font-family: "Amaranth", sans-serif;
+    }
+
     .input {
         corner-shape: squircle;
         @apply border border-gray-300 rounded-lg focus:border-[--color-primary] focus:ring-[--color-primary];
