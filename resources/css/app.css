@@ -4,6 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    .input {
+        corner-shape: squircle;
+        @apply border border-gray-300 rounded-lg focus:border-[--color-primary] focus:ring-[--color-primary];
+    }
+}
+
 * {
     box-sizing: border-box;
 }

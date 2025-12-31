@@ -8,7 +8,7 @@
 
             <div>
                 <label for="name">Naam</label>
-                <input type="text" name="name" id="name" value="{{ old('name') }}" required>
+                <input type="text" name="name" id="name" value="{{ old('name') }}" required class="input">
                 @error('name')
                 <span class="text-red-700">{{ $message }}</span>
                 @enderror

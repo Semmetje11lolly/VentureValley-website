@@ -27,7 +27,7 @@ Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
         ->name('index');
 
     Route::get('attracties', [AdminController::class, 'rides'])
-        ->name('attracties');
+        ->name('attracties.index');
 
     Route::resource('attracties', RideController::class)
         ->except(['index', 'show'])
