@@ -14,6 +14,7 @@
                 <th class="p-3">Type</th>
                 <th class="max-sm:hidden p-3">Gemaakt</th>
                 <th class="max-sm:hidden p-3">Geüpdatet</th>
+                <th class="p-3">Zichtbaarheid</th>
                 <th class="p-3"></th>
             </tr>
             </thead>
@@ -22,8 +23,15 @@
                 <tr class="border-b">
                     <td class="p-3">{{ $ride->name }}</td>
                     <td class="p-3">{{ $ride->type }}</td>
-                    <td class="max-sm:hidden p-3">{{ $ride->created_at }}</td>
-                    <td class="max-sm:hidden p-3">{{ $ride->updated_at }}</td>
+                    <td class="max-sm:hidden p-3">{{ $ride->created_at->format('d-m-Y') }}</td>
+                    <td class="max-sm:hidden p-3">{{ $ride->updated_at->format('d-m-Y') }}</td>
+                    <td class="p-3">
+                        @if($ride->public)
+                            <span class="text-green-600">Zichtbaar</span>
+                        @else
+                            <span class="text-red-700">Verborgen</span>
+                        @endif
+                    </td>
                     <td class="flex justify-end gap-5 text-right p-3">
                         <a href="{{ route('admin.attracties.edit', $ride) }}"><i class="fa-solid fa-pencil"></i></a>
                         <form action="{{ route('admin.attracties.destroy', $ride) }}" method="post"

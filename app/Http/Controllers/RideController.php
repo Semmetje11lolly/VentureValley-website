@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ride;
+use Gate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class RideController extends Controller
 {
@@ -12,7 +14,7 @@ class RideController extends Controller
      */
     public function index()
     {
-        $rides = Ride::all();
+        $rides = Ride::where('public', 1)->get();
 
         return view('rides.index', compact('rides'));
     }
@@ -30,7 +32,43 @@ class RideController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|string|max:100',
+            'type' => 'required|string|max:100',
+            'subtitle' => 'required|string|max:255',
+            'tagline' => 'required|string|max:255',
+            'description' => 'required|string',
+
+            'list_image' => 'required|image|mimes:webp|dimensions:width=600,height=800',
+            'background_image' => 'required|image|mimes:webp',
+
+            'stat_speed' => 'nullable|integer',
+            'stat_length' => 'nullable|integer',
+            'stat_height' => 'nullable|integer',
+            'stat_duration' => 'nullable|integer',
+            'stat_capacity' => 'nullable|integer',
+
+            'property_controllable' => 'boolean',
+            'property_audio' => 'boolean',
+            'property_smoothcoasters' => 'boolean',
+            'public' => 'boolean'
+        ]);
+
+        $validated['list_image'] = $request->file('list_image')->store('rides', 'public');
+        $validated['background_image'] = $request->file('background_image')->store('rides', 'public');
+
+        $slug = Str::slug($request->input('name'));
+        $originalSlug = $slug;
+        $counter = 1;
+        while (Ride::where('slug', $slug)->exists()) {
+            $slug = "{$originalSlug}-{$counter}";
+            $counter++;
+        }
+        $validated['slug'] = $slug;
+
+        Ride::create($validated);
+
+        return redirect()->route('admin.attracties.index');
     }
 
     /**
@@ -38,6 +76,8 @@ class RideController extends Controller
      */
     public function show(Ride $ride)
     {
+        if (!$ride->public && Gate::denies('admin')) abort(404);
+
         $rides = Ride::where('id', '!=', $ride->id)
             ->inRandomOrder()
             ->take(3)

@@ -1,6 +1,9 @@
 <x-default-layout title="{{ $ride->name }} • VentureValley">
     <x-slot name="header">
         <x-header height="large" image="{{ asset($ride->background_image) }}">
+            @if(!$ride->public)
+                <div class="mb-3">Let op! Deze attractie is <span class="text-red-700">verborgen</span>!</div>
+            @endif
             <span class="font-[Amaranth] text-lg">{{ strtoupper($ride->name) }} ✦ {{ strtoupper($ride->type) }}</span>
             <h1>{{ $ride->subtitle }}</h1>
             <x-button variant="transparent" url="{{ route('attracties.index') }}" arrow="left" class="mt-5">
