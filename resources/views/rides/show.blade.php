@@ -11,7 +11,7 @@
 
     @php
         $stats = collect([
-            ['title' => 'Snelheid', 'value' => $ride->stat_speed, 'unit' => 'km/h'],
+            ['title' => 'Snelheid', 'value' => $ride->stat_speed, 'unit' => 'km/u'],
             ['title' => 'Baanlengte', 'value' => $ride->stat_length, 'unit' => 'meter'],
             ['title' => 'Hoogte', 'value' => $ride->stat_height, 'unit' => 'meter'],
             ['title' => 'Ritduur', 'value' => $ride->stat_duration, 'unit' => 'minuten'],

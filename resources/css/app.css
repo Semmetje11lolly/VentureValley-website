@@ -13,6 +13,10 @@
         corner-shape: squircle;
         @apply border border-gray-300 rounded-lg focus:border-[--color-primary] focus:ring-[--color-primary];
     }
+
+    input[type="checkbox"].input {
+        @apply p-3;
+    }
 }
 
 * {
