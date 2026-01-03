@@ -89,17 +89,48 @@ class RideController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Ride $ride)
     {
-        //
+        return view('admin.rides.edit', compact('ride'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Ride $ride)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|string|max:100',
+            'type' => 'required|string|max:100',
+            'subtitle' => 'required|string|max:255',
+            'tagline' => 'required|string|max:255',
+            'description' => 'required|string',
+
+            'list_image' => 'nullable|image|mimes:webp|dimensions:width=600,height=800',
+            'background_image' => 'nullable|image|mimes:webp',
+
+            'stat_speed' => 'nullable|integer',
+            'stat_length' => 'nullable|integer',
+            'stat_height' => 'nullable|integer',
+            'stat_duration' => 'nullable|integer',
+            'stat_capacity' => 'nullable|integer',
+
+            'property_controllable' => 'boolean',
+            'property_audio' => 'boolean',
+            'property_smoothcoasters' => 'boolean',
+            'public' => 'boolean'
+        ]);
+
+        if ($request->hasFile('list_image')) {
+            $validated['list_image'] = $request->file('list_image')->store('rides', 'public');
+        }
+        if ($request->hasFile('background_image')) {
+            $validated['background_image'] = $request->file('background_image')->store('rides', 'public');
+        }
+
+        $ride->update($validated);
+
+        return redirect()->route('admin.attracties.index');
     }
 
     /**
