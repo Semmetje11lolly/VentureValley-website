@@ -70,6 +70,8 @@
                         <label for="list_image">Lijst-foto (WebP, 600×800px)</label>
                         <input type="file" accept=".webp" name="list_image" id="list_image"
                                class="input p-3">
+                        <p class="text-gray-400 text-sm italic">Als je de lijst-foto niet wilt veranderen, laat dit dan
+                            leeg!</p>
                         @error('list_image')
                         <span class="text-red-700">{{ $message }}</span>
                         @enderror
@@ -78,6 +80,8 @@
                         <label for="background_image">Header-foto (WebP)</label>
                         <input type="file" accept=".webp" name="background_image" id="background_image"
                                class="input p-3">
+                        <p class="text-gray-400 text-sm italic">Als je de header-foto niet wilt veranderen, laat dit dan
+                            leeg!</p>
                         @error('background_image')
                         <span class="text-red-700">{{ $message }}</span>
                         @enderror

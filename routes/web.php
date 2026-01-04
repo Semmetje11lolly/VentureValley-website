@@ -30,7 +30,7 @@ Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
         ->name('attracties.index');
 
     Route::resource('attracties', RideController::class)
-        ->except(['index', 'show'])
+        ->except(['index'])
         ->parameters(['attracties' => 'ride']);
 });
 

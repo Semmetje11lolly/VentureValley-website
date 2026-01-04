@@ -140,6 +140,6 @@ class RideController extends Controller
     {
         $ride->delete();
 
-        return redirect()->route('admin.attracties');
+        return redirect()->route('admin.attracties.index');
     }
 }
