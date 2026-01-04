@@ -33,6 +33,7 @@
                         @endif
                     </td>
                     <td class="flex justify-end gap-5 text-right p-3">
+                        <a href="{{ route('attracties.show', $ride) }}"><i class="fa-solid fa-eye"></i></a>
                         <a href="{{ route('admin.attracties.edit', $ride) }}"><i class="fa-solid fa-pencil"></i></a>
                         <form action="{{ route('admin.attracties.destroy', $ride) }}" method="post"
                               onsubmit="return confirm('Weet je zeker dat je {{ $ride->name }} wilt verwijderen?')">
