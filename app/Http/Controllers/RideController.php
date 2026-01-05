@@ -68,7 +68,8 @@ class RideController extends Controller
 
         Ride::create($validated);
 
-        return redirect()->route('admin.attracties.index');
+        return redirect()->route('admin.attracties.index')
+            ->with('alert', "De attractie {$validated['name']} is aangemaakt!");
     }
 
     /**
@@ -130,7 +131,8 @@ class RideController extends Controller
 
         $ride->update($validated);
 
-        return redirect()->route('admin.attracties.index');
+        return redirect()->route('admin.attracties.index')
+            ->with('alert', "De attractie {$ride->name} is bijgewerkt!");
     }
 
     /**
@@ -140,6 +142,7 @@ class RideController extends Controller
     {
         $ride->delete();
 
-        return redirect()->route('admin.attracties.index');
+        return redirect()->route('admin.attracties.index')
+            ->with('alert', "De attractie {$ride->name} is verwijderd!");
     }
 }

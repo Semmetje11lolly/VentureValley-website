@@ -1,6 +1,6 @@
 <x-admin-layout title="Nieuwe Attractie - Dashboard • VentureValley">
     @push('head')
-        @vite(['resources/js/admin.rides.create.js'])
+        @vite(['resources/js/admin-publishing.js'])
     @endpush
 
     <div class="flex justify-between items-center pb-3.5">

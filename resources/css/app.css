@@ -279,3 +279,33 @@ details + details {
     transform: translate(-50%, -50%);
     pointer-events: none;
 }
+
+.alert {
+    position: fixed;
+    background-color: #00AA00;
+
+    color: var(--color-white);
+    text-align: center;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    animation: fadeOut 3.5s forwards;
+
+    z-index: 999;
+    padding: 20px;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
