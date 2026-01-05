@@ -46,20 +46,20 @@
             <a href="https://discord.venturevalleymc.nl">
                 <article
                     class="flex flex-col justify-end min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg text-center pb-4 px-1 transition duration-500 hover:scale-[0.975]"
-                    style="background-image: url({{ asset('/images/EntranceWithForest.webp') }}); box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); corner-shape: scoop">
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url({{ asset('/images/EntranceWithForest.webp') }}); box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); corner-shape: scoop">
                     <h2 class="text-5xl text-white">Betreed onze Discord</h2>
                 </article>
             </a>
             <a href="{{ route('attracties.index') }}">
                 <article
                     class="flex flex-col justify-end min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg text-center pb-4 px-1 transition duration-500 hover:scale-[0.975]"
-                    style="background-image: url({{ asset('/images/HeaderRides.webp') }}); box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); corner-shape: scoop">
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url({{ asset('/images/HeaderRides.webp') }}); box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); corner-shape: scoop">
                     <h2 class="text-5xl text-white">Bekijk onze Attracties</h2>
                 </article>
             </a>
             <article
                 class="flex flex-col justify-end min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg text-center pb-4 px-1 transition duration-500 hover:scale-[0.975]"
-                style="background-image: url({{ asset('/images/HeaderTeam.webp') }}); box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); corner-shape: scoop">
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url({{ asset('/images/HeaderTeam.webp') }}); box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); corner-shape: scoop">
                 <h2 class="text-5xl text-white">Versterk ons Team</h2>
             </article>
         </div>

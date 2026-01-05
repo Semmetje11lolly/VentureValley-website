@@ -57,7 +57,7 @@
     <div class="bg-[--body-background-color] border-t border-solid border-[#E5E7EB] py-5 max-sm:!hidden" id="mega-menu">
         <div class="nav-container" data-mega="ontdek" id="mega-ontdek">
             <div class="grid grid-cols-4 pb-2.5">
-                <ul class="list-none">
+                <ul class="flex flex-col gap-1 list-none">
                     <b>Pretpark</b>
                     <li><a href="{{ route('attracties.index') }}">Attracties</a></li>
                     <li><a href="">Parkshows</a></li>
@@ -65,7 +65,7 @@
                     <li><a href="">Souvenirs</a></li>
                     <li><a href="">Plattegrond</a></li>
                 </ul>
-                <ul class="list-none">
+                <ul class="flex flex-col gap-1 list-none">
                     <b>Recente Evenementen</b>
                     <li><a href="">Halloween 2025</a></li>
                     <li><a href="">1e verjaardag</a></li>
@@ -73,7 +73,7 @@
                     <li><a href="">Halloween 2024</a></li>
                     <li><a href="">De Grote Opening</a></li>
                 </ul>
-                <ul class="list-none">
+                <ul class="flex flex-col gap-1 list-none">
                     <b>Meer VentureValley</b>
                     <li><a href="">VentureValley Blog</a></li>
                     <li><a href="">VentureValley App</a></li>
@@ -89,7 +89,7 @@
         </div>
         <div class="nav-container" data-mega="bezoek" id="mega-bezoek">
             <div class="grid grid-cols-4 pb-2.5">
-                <ul class="list-none">
+                <ul class="flex flex-col gap-1 list-none">
                     <b>Praktische Informatie</b>
                     <li><a href="">Bezoeken</a></li>
                     <li><a href="">Openingstijden</a></li>
@@ -97,7 +97,7 @@
                     <li><a href="">Onderhoudskalender</a></li>
                     <li><a href="">Parkreglement</a></li>
                 </ul>
-                <ul class="list-none">
+                <ul class="flex flex-col gap-1 list-none">
                     <b>Ranks & Cosmetics</b>
                     <li><a href="https://shop.venturevalleymc.nl/category/vip" target="_blank">VIP Rank</a></li>
                     <li><a href="https://shop.venturevalleymc.nl/category/plus" target="_blank">Plus Rank</a></li>
@@ -112,7 +112,7 @@
         </div>
         <div class="nav-container" data-mega="contact" id="mega-contact">
             <div class="grid grid-cols-4 pb-2.5">
-                <ul class="list-none">
+                <ul class="flex flex-col gap-1 list-none">
                     <b>Contact</b>
                     <li><a href="">Contact met VentureValley</a></li>
                     <li><a href="">Veelgestelde Vragen</a></li>
@@ -120,7 +120,7 @@
                     <li><a href="">Instagram</a></li>
                     <li><a href="">TikTok</a></li>
                 </ul>
-                <ul class="list-none">
+                <ul class="flex flex-col gap-1 list-none">
                     <b>Over VentureValley</b>
                     <li><a href="">Ons verhaal</a></li>
                     <li><a href="">Geschiedenis</a></li>
