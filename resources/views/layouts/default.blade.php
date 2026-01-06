@@ -60,7 +60,7 @@
                 <ul class="flex flex-col gap-1 list-none">
                     <b>Pretpark</b>
                     <li><a href="{{ route('attracties.index') }}">Attracties</a></li>
-                    <li><a href="">Parkshows</a></li>
+                    <li><a href="{{ route('parkshows.index') }}">Parkshows</a></li>
                     <li><a href="">Horeca</a></li>
                     <li><a href="">Souvenirs</a></li>
                     <li><a href="">Plattegrond</a></li>
@@ -144,7 +144,7 @@
                     <summary>Pretpark</summary>
                     <ul class="list-none">
                         <li><a href="{{ route('attracties.index') }}">Attracties</a></li>
-                        <li><a href="">Parkshows</a></li>
+                        <li><a href="{{ route('parkshows.index') }}">Parkshows</a></li>
                         <li><a href="">Horeca</a></li>
                         <li><a href="">Souvenirs</a></li>
                         <li><a href="">Plattegrond</a></li>
