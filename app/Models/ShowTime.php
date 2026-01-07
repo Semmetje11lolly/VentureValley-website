@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class ShowTime extends Model
 {
     protected $fillable = ['show_id', 'start_time', 'end_time', 'edition', 'location'];
+    protected $touches = ['show'];
 
     public function show(): BelongsTo
     {

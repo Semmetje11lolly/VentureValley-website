@@ -1,12 +1,14 @@
 window.addEventListener('DOMContentLoaded', init);
 
-let rowIndex = 1;
+let rowIndex;
 let addButton;
 let timesContainer;
 
 function init() {
     addButton = document.querySelector('#show-times-add');
     timesContainer = document.querySelector('#show-times');
+
+    rowIndex = timesContainer.querySelectorAll('.show-time-row').length;
 
     addButton.addEventListener('click', () => {
         const row = createTimeRow();
