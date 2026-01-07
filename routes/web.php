@@ -37,6 +37,13 @@ Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
     Route::resource('attracties', RideController::class)
         ->except(['index'])
         ->parameters(['attracties' => 'ride']);
+
+    Route::get('parkshows', [AdminController::class, 'shows'])
+        ->name('parkshows.index');
+
+    Route::resource('parkshows', ShowController::class)
+        ->except(['index'])
+        ->parameters(['parkshows' => 'show']);
 });
 
 require __DIR__ . '/auth.php';

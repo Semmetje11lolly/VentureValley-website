@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ride;
+use App\Models\Show;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -17,5 +18,12 @@ class AdminController extends Controller
         $rides = Ride::all();
 
         return view('admin.rides.index', compact('rides'));
+    }
+
+    public function shows()
+    {
+        $shows = Show::all();
+
+        return view('admin.shows.index', compact('shows'));
     }
 }

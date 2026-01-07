@@ -299,9 +299,9 @@
             </div>
             <ul class="flex list-none gap-2.5">
                 <li><a href="">Privacybeleid</a></li>
-                <li>•</li>
+                <li aria-hidden="true">•</li>
                 <li><a href="">Parkreglement</a></li>
-                <li>•</li>
+                <li aria-hidden="true">•</li>
                 <li><a href="">Contact</a></li>
             </ul>
             <div class="grow max-sm:!hidden"></div>
