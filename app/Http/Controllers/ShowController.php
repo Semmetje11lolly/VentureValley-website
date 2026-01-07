@@ -151,8 +151,11 @@ class ShowController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Show $show)
     {
-        //
+        $show->delete();
+
+        return redirect()->route('admin.parkshows.index')
+            ->with('alert', "De parkshow {$show->name} is verwijderd!");
     }
 }
