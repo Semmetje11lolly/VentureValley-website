@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Show;
+use Gate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -78,9 +79,18 @@ class ShowController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Show $show)
     {
-        //
+        if (!$show->public && Gate::denies('admin')) abort(404);
+
+        $shows = Show::where('id', '!=', $show->id)
+            ->inRandomOrder()
+            ->take(3)
+            ->get();
+
+        $show->load('showTimes');
+
+        return view('shows.show', compact('show', 'shows'));
     }
 
     /**
