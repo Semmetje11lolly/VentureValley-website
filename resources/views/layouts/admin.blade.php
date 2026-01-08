@@ -33,6 +33,7 @@
                class="flex-shrink-0 px-2.5 py-2.5 @if(Route::currentRouteName() === "admin.index") font-semibold bg-[--color-primary] @endif">
                 <i class="fa-solid fa-gauge"></i> Dashboard
             </a>
+            <hr class="border-2 border-gray-800">
             <a href="{{ route('admin.attracties.index') }}"
                class="flex-shrink-0 px-2.5 py-2.5 @if(request()->routeIs('admin.attracties.*')) font-semibold bg-[--color-primary] @endif">
                 <i class="fa-solid fa-ticket"></i> Attracties
@@ -43,7 +44,7 @@
             </a>
             <a href="{{ route('admin.restaurants.index') }}"
                class="flex-shrink-0 px-2.5 py-2.5 @if(request()->routeIs('admin.restaurants.*')) font-semibold bg-[--color-primary] @endif">
-                <i class="fa-solid fa-masks-theater"></i> Eten & drinken
+                <i class="fa-solid fa-utensils"></i> Eten & drinken
             </a>
         </div>
     </nav>

@@ -84,7 +84,7 @@
     <section class="text-center pb-14">
         <h2>Ontdek meer attracties</h2>
         <div class="grid grid-cols-3 gap-5 max-sm:grid-cols-1 lg:px-20">
-            @foreach($rides as $ride)
+            @forelse($rides as $ride)
                 <a href="{{ route('attracties.show', $ride->slug) }}">
                     <article
                         class="flex flex-col justify-end min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg text-center pb-4 px-1 transition-all duration-300 hover:bg-bottom"
@@ -93,7 +93,9 @@
                         <h3 class="text-4xl text-white">{{ $ride->name }}</h3>
                     </article>
                 </a>
-            @endforeach
+            @empty
+                <p class="col-span-3">Er zijn nu geen andere attracties om te ontdekken! Kom binnenkort terug!</p>
+            @endforelse
         </div>
     </section>
 </x-default-layout>

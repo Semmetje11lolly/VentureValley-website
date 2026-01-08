@@ -247,7 +247,7 @@ footer .footer-container {
     padding: 12px 12px 0;
 }
 
-.grid > :only-child {
+.grid > a:only-child {
     @media (width > 640px) {
         grid-column: 2;
     }
