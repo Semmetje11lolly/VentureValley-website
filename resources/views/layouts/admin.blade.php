@@ -41,9 +41,13 @@
                class="flex-shrink-0 px-2.5 py-2.5 @if(request()->routeIs('admin.parkshows.*')) font-semibold bg-[--color-primary] @endif">
                 <i class="fa-solid fa-masks-theater"></i> Parkshows
             </a>
+            <a href="{{ route('admin.restaurants.index') }}"
+               class="flex-shrink-0 px-2.5 py-2.5 @if(request()->routeIs('admin.restaurants.*')) font-semibold bg-[--color-primary] @endif">
+                <i class="fa-solid fa-masks-theater"></i> Eten & drinken
+            </a>
         </div>
     </nav>
-    <main class="max-w-none px-5 py-3 max-sm:w-full" id="main">
+    <main class="max-w-none min-w-[unset] px-5 py-3 max-sm:w-full" id="main">
         {{ $slot }}
     </main>
 </div>

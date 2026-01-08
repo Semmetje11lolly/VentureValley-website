@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RestaurantController;
 use App\Http\Controllers\RideController;
 use App\Http\Controllers\ShowController;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +28,10 @@ Route::resource('parkshows', ShowController::class)
     ->only(['index', 'show'])
     ->parameters(['parkshows' => 'show']);
 
+Route::resource('restaurants', RestaurantController::class)
+    ->only(['index', 'show'])
+    ->parameters(['restaurants' => 'restaurant']);
+
 Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [AdminController::class, 'index'])
         ->name('index');
@@ -44,6 +49,13 @@ Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
     Route::resource('parkshows', ShowController::class)
         ->except(['index'])
         ->parameters(['parkshows' => 'show']);
+
+    Route::get('restaurants', [AdminController::class, 'restaurants'])
+        ->name('restaurants.index');
+
+    Route::resource('restaurants', RestaurantController::class)
+        ->except(['index'])
+        ->parameters(['restaurants' => 'restaurant']);
 });
 
 require __DIR__ . '/auth.php';

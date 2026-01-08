@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Restaurant;
 use App\Models\Ride;
 use App\Models\Show;
 use Illuminate\Http\Request;
@@ -25,5 +26,12 @@ class AdminController extends Controller
         $shows = Show::all();
 
         return view('admin.shows.index', compact('shows'));
+    }
+
+    public function restaurants()
+    {
+        $restaurants = Restaurant::all();
+
+        return view('admin.restaurants.index', compact('restaurants'));
     }
 }

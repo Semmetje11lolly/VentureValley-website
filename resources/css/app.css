@@ -98,6 +98,7 @@ section h2, section h3 {
 main {
     flex-grow: 1;
 
+    min-width: min(1200px, 100%);
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 12px;
