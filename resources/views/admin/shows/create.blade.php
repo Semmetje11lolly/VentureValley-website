@@ -45,7 +45,7 @@
                         <label for="tagline">Tagline</label>
                         <input type="text" name="tagline" id="tagline" value="{{ old('tagline') }}" required
                                class="input" placeholder="Dit staat onder de header">
-                        @error('subtitle')
+                        @error('tagline')
                         <span class="text-red-700">{{ $message }}</span>
                         @enderror
                     </div>
@@ -55,7 +55,7 @@
                     <label for="description">Beschrijving</label>
                     <textarea rows="3" name="description" id="description" required
                               class="input">{{ old('description') }}</textarea>
-                    @error('subtitle')
+                    @error('description')
                     <span class="text-red-700">{{ $message }}</span>
                     @enderror
                 </div>

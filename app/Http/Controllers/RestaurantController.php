@@ -95,17 +95,65 @@ class RestaurantController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Restaurant $restaurant)
     {
-        //
+        $restaurant->load('menuItems');
+
+        return view('admin.restaurants.edit', compact('restaurant'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Restaurant $restaurant)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|string|max:100',
+            'type' => 'required|string|max:100',
+            'subtitle' => 'required|string|max:255',
+            'tagline' => 'required|string|max:255',
+            'description' => 'required|string',
+
+            'list_image' => 'nullable|image|mimes:webp|dimensions:width=600,height=800',
+            'background_image' => 'nullable|image|mimes:webp',
+
+            'menu_items' => 'nullable|array|min:1',
+            'menu_items.*.id' => 'nullable|exists:menu_items',
+            'menu_items.*.name' => 'required_with:menu_items|string|max:100',
+            'menu_items.*.description' => 'required_with:menu_items|string|max:255',
+            'menu_items.*.price' => 'required_with:menu_items|integer',
+
+            'public' => 'boolean'
+        ]);
+
+        if ($request->hasFile('list_image')) {
+            $validated['list_image'] = $request->file('list_image')->store('restaurants', 'public');
+        }
+        if ($request->hasFile('background_image')) {
+            $validated['background_image'] = $request->file('background_image')->store('restaurants', 'public');
+        }
+
+        $restaurant->update(collect($validated)->except('menu_items')->toArray());
+
+        $existingIds = $restaurant->menuItems->pluck('id')->toArray();
+        $submittedIds = [];
+
+        foreach ($validated['menu_items'] as $itemData) {
+            if (isset($itemData['id'])) {
+                $menuItem = $restaurant->menuItems()->find($itemData['id']);
+                $menuItem->update($itemData);
+                $submittedIds[] = $menuItem->id;
+            } else {
+                $new = $restaurant->menuItems()->create($itemData);
+                $submittedIds[] = $new->id;
+            }
+        }
+
+        $toDelete = array_diff($existingIds, $submittedIds);
+        $restaurant->menuItems()->whereIn('id', $toDelete)->delete();
+
+        return redirect()->route('admin.restaurants.index')
+            ->with('alert', "Het restaurant {$restaurant->name} is bijgewerkt!");
     }
 
     /**

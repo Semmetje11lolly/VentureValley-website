@@ -10,6 +10,8 @@ function init() {
 
     rowIndex = itemsContainer.querySelectorAll('.menu-item-row').length;
 
+    updateAddButton();
+
     addButton.addEventListener('click', () => {
         const row = createItemRow();
         itemsContainer.appendChild(row);
