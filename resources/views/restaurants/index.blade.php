@@ -1,6 +1,6 @@
 <x-default-layout title="Parkshows • VentureValley">
     <x-slot name="header">
-        <x-header height="medium" image="{{ asset('/images/HeaderRides.webp') }}">
+        <x-header height="medium" image="{{ asset('/images/HeaderRestaurants.webp') }}">
             <h1>Eten & drinken</h1>
         </x-header>
     </x-slot>
