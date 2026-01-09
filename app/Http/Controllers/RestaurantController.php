@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class RestaurantController extends Controller
 {
@@ -22,7 +23,7 @@ class RestaurantController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.restaurants.create');
     }
 
     /**
@@ -30,7 +31,47 @@ class RestaurantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|string|max:100',
+            'type' => 'required|string|max:100',
+            'subtitle' => 'required|string|max:255',
+            'tagline' => 'required|string|max:255',
+            'description' => 'required|string',
+
+            'list_image' => 'required|image|mimes:webp|dimensions:width=600,height=800',
+            'background_image' => 'required|image|mimes:webp',
+
+            'menu_items' => 'nullable|array|min:1',
+            'menu_items.*.name' => 'required_with:menu_items|string|max:100',
+            'menu_items.*.description' => 'required_with:menu_items|string|max:255',
+            'menu_items.*.price' => 'required_with:menu_items|integer',
+
+            'public' => 'boolean'
+        ]);
+
+        $validated['list_image'] = $request->file('list_image')->store('restaurants', 'public');
+        $validated['background_image'] = $request->file('background_image')->store('restaurants', 'public');
+
+        $slug = Str::slug($request->input('name'));
+        $originalSlug = $slug;
+        $counter = 1;
+        while (Restaurant::where('slug', $slug)->exists()) {
+            $slug = "{$originalSlug}-{$counter}";
+            $counter++;
+        }
+        $validated['slug'] = $slug;
+
+        $menuItems = $validated['menu_items'];
+        unset($validated['menu_items']);
+
+        $restaurant = Restaurant::create($validated);
+
+        foreach ($menuItems as $menuItem) {
+            $restaurant->menuItems()->create($menuItem);
+        }
+
+        return redirect()->route('admin.restaurants.index')
+            ->with('alert', "Het restaurant {$validated['name']} is aangemaakt!");
     }
 
     /**

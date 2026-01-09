@@ -90,7 +90,11 @@
 
                 <hr class="mt-3">
 
-                <h2 class="text-xl mb-0">Showtijden</h2>
+                <div>
+                    <h2 class="text-xl mb-0">Showtijden</h2>
+                    <p class="text-gray-400 text-sm italic">Een show heeft minimaal één showtijd nodig! Je kunt er meer
+                        toevoegen!</p>
+                </div>
                 <div class="flex flex-col gap-3" id="show-times">
                     @foreach(old('show_times', $show->showTimes->toArray()) as $i => $time)
                         <div class="flex gap-3 relative bg-gray-100 border rounded p-3 show-time-row"
