@@ -44,7 +44,7 @@
                         <a href="{{ route('admin.parkshows.edit', $show) }}" aria-label="Bewerken"><i
                                 class="fa-solid fa-pencil"></i></a>
                         <form action="{{ route('admin.parkshows.destroy', $show) }}" method="post"
-                              onsubmit="return confirm('Weet je zeker dat je {{ $show->name }} wilt verwijderen?\nDit kan niet worden teruggedraaid!')"
+                              onsubmit="return confirm(`Weet je zeker dat je {{ $show->name }} wilt verwijderen?\nDit kan niet worden teruggedraaid!`)"
                               class="max-sm:hidden">
                             @csrf
                             @method('DELETE')

@@ -44,7 +44,7 @@
                         <a href="{{ route('admin.restaurants.edit', $restaurant) }}" aria-label="Bewerken"><i
                                 class="fa-solid fa-pencil"></i></a>
                         <form action="{{ route('admin.restaurants.destroy', $restaurant) }}" method="post"
-                              onsubmit="return confirm('Weet je zeker dat je {{ $restaurant->name }} wilt verwijderen?\nDit kan niet worden teruggedraaid!')"
+                              onsubmit="return confirm(`Weet je zeker dat je {{ $restaurant->name }} wilt verwijderen?\nDit kan niet worden teruggedraaid!`)"
                               class="max-sm:hidden">
                             @csrf
                             @method('DELETE')

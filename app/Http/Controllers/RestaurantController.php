@@ -62,12 +62,14 @@ class RestaurantController extends Controller
         }
         $validated['slug'] = $slug;
 
-        $menuItems = $validated['menu_items'];
-        unset($validated['menu_items']);
+        if (!empty($validated['menu_items'])) {
+            $menuItems = $validated['menu_items'];
+            unset($validated['menu_items']);
+        }
 
         $restaurant = Restaurant::create($validated);
 
-        foreach ($menuItems as $menuItem) {
+        foreach ($menuItems ?? [] as $menuItem) {
             $restaurant->menuItems()->create($menuItem);
         }
 
@@ -159,8 +161,11 @@ class RestaurantController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Restaurant $restaurant)
     {
-        //
+        $restaurant->delete();
+
+        return redirect()->route('admin.restaurants.index')
+            ->with('alert', "Het restaurant {$restaurant->name} is verwijderd!");
     }
 }
