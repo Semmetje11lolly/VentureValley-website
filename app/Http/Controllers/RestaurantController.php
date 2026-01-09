@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Restaurant;
+use Gate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -77,9 +78,18 @@ class RestaurantController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Restaurant $restaurant)
     {
-        //
+        if (!$restaurant->public && Gate::denies('admin')) abort(404);
+
+        $restaurants = Restaurant::where('id', '!=', $restaurant->id)
+            ->inRandomOrder()
+            ->take(3)
+            ->get();
+
+        $restaurant->load('menuItems');
+
+        return view('restaurants.show', compact('restaurant', 'restaurants'));
     }
 
     /**

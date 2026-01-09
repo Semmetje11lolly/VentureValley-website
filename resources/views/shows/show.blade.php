@@ -22,13 +22,13 @@
         <div class="grid grid-cols-1 gap-5 bg-white p-5 rounded-lg"
              style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25); corner-shape: squircle">
             @foreach($show->showTimes as $i => $showTime)
-                <div class="flex gap-5 justify-between items-center">
+                <div class="flex gap-5 justify-between items-center max-sm:justify-center">
                     <div class="flex gap-3 items-center">
-                        <i class="text-3xl text-[--color-primary] fa-solid fa-masks-theater"></i>
+                        <i class="text-3xl text-[--color-primary] max-sm:hidden fa-solid fa-masks-theater"></i>
                         <b class="font-mono">{{ $showTime->start_time }} - {{ $showTime->end_time }}</b>
                         <span>{{ $showTime->edition }}</span>
                     </div>
-                    <div class="flex gap-3 items-center">
+                    <div class="flex gap-3 items-center max-sm:hidden">
                         <i class="text-3xl text-[--color-primary] fa-solid fa-map-pin"></i>
                         <span>{{ $showTime->location }}</span>
                     </div>
