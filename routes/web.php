@@ -37,6 +37,9 @@ Route::resource('souvenirs', SouvenirController::class)
     ->only(['index', 'show'])
     ->parameters(['souvenirs' => 'souvenir']);
 
+Route::get('/privacybeleid', [HomeController::class, 'privacy'])
+    ->name('privacy');
+
 Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [AdminController::class, 'index'])
         ->name('index');
