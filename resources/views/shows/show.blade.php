@@ -41,7 +41,7 @@
         <h2>Ontdek meer parkshows</h2>
         <div class="grid grid-cols-3 gap-5 max-sm:grid-cols-1 lg:px-20">
             @forelse($shows as $show)
-                <a href="{{ route('attracties.show', $show->slug) }}">
+                <a href="{{ route('parkshows.show', $show->slug) }}">
                     <article
                         class="flex flex-col justify-end min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg text-center pb-4 px-1 transition-all duration-300 hover:bg-bottom"
                         style="background-image: linear-gradient(180deg, #00000000 70%, #000000 100%), url({{ asset($show->list_image) }}); box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); corner-shape: scoop">

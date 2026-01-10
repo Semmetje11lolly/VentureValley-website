@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Souvenir;
+use Gate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -79,9 +80,18 @@ class SouvenirController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Souvenir $souvenir)
     {
-        //
+        if (!$souvenir->public && Gate::denies('admin')) abort(404);
+
+        $souvenirs = Souvenir::where('id', '!=', $souvenir->id)
+            ->inRandomOrder()
+            ->take(3)
+            ->get();
+
+        $souvenir->load('shopItems');
+
+        return view('souvenirs.show', compact('souvenir', 'souvenirs'));
     }
 
     /**
