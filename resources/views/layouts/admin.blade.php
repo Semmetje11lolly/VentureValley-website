@@ -46,6 +46,10 @@
                class="flex-shrink-0 px-2.5 py-2.5 @if(request()->routeIs('admin.restaurants.*')) font-semibold bg-[--color-primary] @endif">
                 <i class="fa-solid fa-utensils"></i> Eten & drinken
             </a>
+            <a href="{{ route('admin.souvenirs.index') }}"
+               class="flex-shrink-0 px-2.5 py-2.5 @if(request()->routeIs('admin.souvenirs.*')) font-semibold bg-[--color-primary] @endif">
+                <i class="fa-solid fa-utensils"></i> Souvenirs
+            </a>
         </div>
     </nav>
     <main class="max-w-none min-w-[unset] px-5 py-3 max-sm:w-full" id="main">

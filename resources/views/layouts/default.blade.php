@@ -62,7 +62,7 @@
                     <li><a href="{{ route('attracties.index') }}">Attracties</a></li>
                     <li><a href="{{ route('parkshows.index') }}">Parkshows</a></li>
                     <li><a href="{{ route('restaurants.index') }}">Eten & drinken</a></li>
-                    <li><a href="">Souvenirs</a></li>
+                    <li><a href="{{ route('souvenirs.index') }}">Souvenirs</a></li>
                     <li><a href="">Plattegrond</a></li>
                 </ul>
                 <ul class="flex flex-col gap-1 list-none">

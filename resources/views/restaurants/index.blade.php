@@ -1,4 +1,4 @@
-<x-default-layout title="Parkshows • VentureValley">
+<x-default-layout title="Eten & drinken • VentureValley">
     <x-slot name="header">
         <x-header height="medium" image="{{ asset('/images/HeaderRestaurants.webp') }}">
             <h1>Eten & drinken</h1>

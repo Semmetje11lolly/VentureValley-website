@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RestaurantController;
 use App\Http\Controllers\RideController;
 use App\Http\Controllers\ShowController;
+use App\Http\Controllers\SouvenirController;
 use Illuminate\Support\Facades\Route;
 
 Route::permanentRedirect('/dashboard', '/')
@@ -32,6 +33,10 @@ Route::resource('restaurants', RestaurantController::class)
     ->only(['index', 'show'])
     ->parameters(['restaurants' => 'restaurant']);
 
+Route::resource('souvenirs', SouvenirController::class)
+    ->only(['index', 'show'])
+    ->parameters(['souvenirs' => 'souvenir']);
+
 Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [AdminController::class, 'index'])
         ->name('index');
@@ -56,6 +61,13 @@ Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
     Route::resource('restaurants', RestaurantController::class)
         ->except(['index'])
         ->parameters(['restaurants' => 'restaurant']);
+
+    Route::get('souvenirs', [AdminController::class, 'souvenirs'])
+        ->name('souvenirs.index');
+
+    Route::resource('souvenirs', SouvenirController::class)
+        ->except(['index'])
+        ->parameters(['souvenirs' => 'souvenir']);
 });
 
 require __DIR__ . '/auth.php';
