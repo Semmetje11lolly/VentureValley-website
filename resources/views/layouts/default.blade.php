@@ -298,7 +298,7 @@
                 <i>Wij zijn geen onderdeel van Mojang AB.</i>
             </div>
             <ul class="flex list-none gap-2.5">
-                <li><a href="">Privacybeleid</a></li>
+                <li><a href="{{ route('privacy') }}">Privacybeleid</a></li>
                 <li aria-hidden="true">•</li>
                 <li><a href="">Parkreglement</a></li>
                 <li aria-hidden="true">•</li>

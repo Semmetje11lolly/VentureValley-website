@@ -97,24 +97,75 @@ class SouvenirController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Souvenir $souvenir)
     {
-        //
+        $souvenir->load('shopItems');
+
+        return view('admin.souvenirs.edit', compact('souvenir'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Souvenir $souvenir)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|string|max:100',
+            'type' => 'required|string|max:100',
+            'subtitle' => 'required|string|max:255',
+            'tagline' => 'required|string|max:255',
+            'description' => 'required|string',
+
+            'list_image' => 'nullable|image|mimes:webp|dimensions:width=600,height=800',
+            'background_image' => 'nullable|image|mimes:webp',
+
+            'shop_items' => 'nullable|array|min:1',
+            'shop_items.*.id' => 'nullable|exists:shop_items',
+            'shop_items.*.name' => 'required_with:shop_items|string|max:100',
+            'shop_items.*.description' => 'required_with:shop_items|string|max:255',
+            'shop_items.*.price' => 'required_with:shop_items|integer',
+
+            'public' => 'boolean'
+        ]);
+
+        if ($request->hasFile('list_image')) {
+            $validated['list_image'] = $request->file('list_image')->store('souvenirs', 'public');
+        }
+        if ($request->hasFile('background_image')) {
+            $validated['background_image'] = $request->file('background_image')->store('souvenirs', 'public');
+        }
+
+        $souvenir->update(collect($validated)->except('shop_items')->toArray());
+
+        $existingIds = $souvenir->shopItems()->pluck('id')->toArray();
+        $submittedIds = [];
+
+        foreach ($validated['shop_items'] as $itemData) {
+            if (isset($itemData['id'])) {
+                $shopItem = $souvenir->shopItems()->find($itemData['id']);
+                $shopItem->update($itemData);
+                $submittedIds[] = $shopItem->id;
+            } else {
+                $new = $souvenir->shopItems()->create($itemData);
+                $submittedIds[] = $new->id;
+            }
+        }
+
+        $toDelete = array_diff($existingIds, $submittedIds);
+        $souvenir->shopItems()->whereIn('id', $toDelete)->delete();
+
+        return redirect()->route('admin.souvenirs.index')
+            ->with('alert', "De souvenirwinkel {$souvenir->name} is bijgewerkt!");
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Souvenir $souvenir)
     {
-        //
+        $souvenir->delete();
+
+        return redirect()->route('admin.souvenirs.index')
+            ->with('alert', "De souvenirwinkel {$souvenir->name} is verwijderd!");
     }
 }
