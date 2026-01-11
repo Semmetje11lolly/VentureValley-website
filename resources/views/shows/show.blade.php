@@ -1,4 +1,8 @@
 <x-default-layout title="{{ $show->name }} • VentureValley">
+    @push('head')
+        <meta name="description" content="{{ $show->description }}">
+    @endpush
+
     <x-slot name="header">
         <x-header height="large" image="{{ asset($show->background_image) }}">
             @if(!$show->public)

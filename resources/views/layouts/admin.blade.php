@@ -10,6 +10,7 @@
 
     <title>{{ html_entity_decode($title ?? config('app.name')) }}</title>
 
+    <link rel="canonical" href="{{ url()->current() }}">
     @stack('head')
 
     <!-- Scripts -->

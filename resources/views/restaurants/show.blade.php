@@ -1,4 +1,8 @@
 <x-default-layout title="{{ $restaurant->name }} • VentureValley">
+    @push('head')
+        <meta name="description" content="{{ $restaurants->description }}">
+    @endpush
+
     <x-slot name="header">
         <x-header height="large" image="{{ asset($restaurant->background_image) }}">
             @if(!$restaurant->public)

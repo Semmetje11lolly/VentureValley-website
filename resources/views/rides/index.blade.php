@@ -1,4 +1,9 @@
 <x-default-layout title="Attracties • VentureValley">
+    @push('head')
+        <meta name="description"
+              content="Beleef VentureValley's ruime aanbod aan spectaculaire attracties! Bekijk hier het overzicht!">
+    @endpush
+
     <x-slot name="header">
         <x-header height="medium" image="{{ asset('/images/HeaderRides.webp') }}">
             <h1>Attracties</h1>

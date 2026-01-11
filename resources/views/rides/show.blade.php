@@ -1,4 +1,8 @@
 <x-default-layout title="{{ $ride->name }} • VentureValley">
+    @push('head')
+        <meta name="description" content="{{ $ride->description }}">
+    @endpush
+
     <x-slot name="header">
         <x-header height="large" image="{{ asset($ride->background_image) }}">
             @if(!$ride->public)

@@ -1,4 +1,9 @@
 <x-default-layout title="Souvenirs • VentureValley">
+    @push('head')
+        <meta name="description"
+              content="Scoor één van de vele VentureValley souvenirs! Bekijk hier het overzicht!">
+    @endpush
+
     <x-slot name="header">
         <x-header height="medium" image="{{ asset('/images/HeaderSouvenirs.webp') }}">
             <h1>Souvenirs</h1>

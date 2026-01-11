@@ -1,4 +1,9 @@
 <x-default-layout title="Eten & drinken • VentureValley">
+    @push('head')
+        <meta name="description"
+              content="Ontdek al het lekkere eten & drinken van VentureValley! Bekijk hier het overzicht!">
+    @endpush
+
     <x-slot name="header">
         <x-header height="medium" image="{{ asset('/images/HeaderRestaurants.webp') }}">
             <h1>Eten & drinken</h1>

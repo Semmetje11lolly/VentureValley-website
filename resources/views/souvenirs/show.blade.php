@@ -1,4 +1,8 @@
 <x-default-layout title="{{ $souvenir->name }} • VentureValley">
+    @push('head')
+        <meta name="description" content="{{ $souvenir->description }}">
+    @endpush
+
     <x-slot name="header">
         <x-header height="large" image="{{ asset($souvenir->background_image) }}">
             @if(!$souvenir->public)
