@@ -40,6 +40,9 @@ Route::resource('souvenirs', SouvenirController::class)
 Route::get('/privacybeleid', [HomeController::class, 'privacy'])
     ->name('privacy');
 
+Route::get('/parkreglement', [HomeController::class, 'parkreglement'])
+    ->name('parkreglement');
+
 Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [AdminController::class, 'index'])
         ->name('index');

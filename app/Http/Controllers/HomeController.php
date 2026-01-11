@@ -15,4 +15,9 @@ class HomeController extends Controller
     {
         return view('privacy');
     }
+
+    public function parkreglement()
+    {
+        return view('parkreglement');
+    }
 }

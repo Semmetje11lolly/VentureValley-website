@@ -96,7 +96,7 @@
                     <li><a href="">Openingstijden</a></li>
                     <li><a href="">Plattegrond</a></li>
                     <li><a href="">Onderhoudskalender</a></li>
-                    <li><a href="">Parkreglement</a></li>
+                    <li><a href="{{ route('parkreglement') }}">Parkreglement</a></li>
                 </ul>
                 <ul class="flex flex-col gap-1 list-none">
                     <b>Ranks & Cosmetics</b>
@@ -180,7 +180,7 @@
                         <li><a href="">Openingstijden</a></li>
                         <li><a href="">Plattegrond</a></li>
                         <li><a href="">Onderhoudskalender</a></li>
-                        <li><a href="">Parkreglement</a></li>
+                        <li><a href="{{ route('parkreglement') }}">Parkreglement</a></li>
                     </ul>
                 </details>
                 <details>
@@ -301,7 +301,7 @@
             <ul class="flex list-none gap-2.5">
                 <li><a href="{{ route('privacy') }}">Privacybeleid</a></li>
                 <li aria-hidden="true">•</li>
-                <li><a href="">Parkreglement</a></li>
+                <li><a href="{{ route('parkreglement') }}">Parkreglement</a></li>
                 <li aria-hidden="true">•</li>
                 <li><a href="">Contact</a></li>
             </ul>

@@ -1,4 +1,8 @@
 <x-default-layout title="Privacybeleid • VentureValley">
+    @push('head')
+        <meta name="description" content="Het privacybeleid van VentureValley: Nederlandse Minecraft Pretpark server.">
+    @endpush
+
     <x-slot name="header">
         <x-header height="medium" image="{{ asset('/images/HeaderDefault.webp') }}">
             <h1>Privacybeleid</h1>
