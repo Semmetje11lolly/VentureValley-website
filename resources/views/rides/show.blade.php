@@ -77,9 +77,9 @@
             @if($ride->property_smoothcoasters)
                 <div class="flex gap-5 items-center">
                     <img src="{{ asset('/images/IconSmoothcoasters.png') }}" alt="" class="w-20">
-                    <p class="text-sm">Als je de SmoothCoasters-mod gebruikt, beweegt je camera mee met de trein in
-                        bijvoorbeeld
-                        loopings.</p>
+                    <p class="text-sm">Als je de <a class="text-[--color-primary] underline"
+                                                    href="https://vv-website.test/bezoeken#smoothcoasters">SmoothCoasters-mod</a>
+                        gebruikt, beweegt je camera mee met de trein in bijvoorbeeld loopings.</p>
                 </div>
             @endif
         </div>
