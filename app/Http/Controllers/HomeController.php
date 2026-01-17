@@ -11,6 +11,11 @@ class HomeController extends Controller
         return view('home');
     }
 
+    public function bezoeken()
+    {
+        return view('bezoeken');
+    }
+
     public function privacy()
     {
         return view('privacy');

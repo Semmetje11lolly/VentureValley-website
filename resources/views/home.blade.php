@@ -16,7 +16,7 @@
     <x-header-card>
         <h2 class="text-2xl">play.venturevalleymc.nl</h2>
         Bezoek VentureValley met Minecraft Java-editie 1.20.4 of hoger
-        <x-button>
+        <x-button url="{{ route('bezoeken') }}">
             VentureValley bezoeken
         </x-button>
     </x-header-card>

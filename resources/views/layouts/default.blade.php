@@ -92,7 +92,7 @@
             <div class="grid grid-cols-4 pb-2.5">
                 <ul class="flex flex-col gap-1 list-none">
                     <b>Praktische Informatie</b>
-                    <li><a href="">Bezoeken</a></li>
+                    <li><a href="{{ route('bezoeken') }}">Bezoeken</a></li>
                     <li><a href="">Openingstijden</a></li>
                     <li><a href="">Plattegrond</a></li>
                     <li><a href="">Onderhoudskalender</a></li>
@@ -176,7 +176,7 @@
                 <details>
                     <summary>Praktische Informatie</summary>
                     <ul class="list-none">
-                        <li><a href="">Bezoeken</a></li>
+                        <li><a href="{{ route('bezoeken') }}">Bezoeken</a></li>
                         <li><a href="">Openingstijden</a></li>
                         <li><a href="">Plattegrond</a></li>
                         <li><a href="">Onderhoudskalender</a></li>
@@ -233,7 +233,7 @@
                 <li><a href="{{ route('attracties.index') }}">Attracties</a></li>
                 <li><a href="">Openingstijden</a></li>
                 <li><a href="">Attracties in onderhoud</a></li>
-                <li><a href="">Bezoeken</a></li>
+                <li><a href="{{ route('bezoeken') }}">Bezoeken</a></li>
             </ul>
             <ul class="flex flex-col gap-1 list-none">
                 <li><b>Over VentureValley</b></li>
@@ -262,7 +262,7 @@
                     <li><a href="{{ route('attracties.index') }}">Attracties</a></li>
                     <li><a href="">Openingstijden</a></li>
                     <li><a href="">Attracties in onderhoud</a></li>
-                    <li><a href="">Bezoeken</a></li>
+                    <li><a href="{{ route('bezoeken') }}">Bezoeken</a></li>
                 </ul>
             </details>
             <details name="footer">

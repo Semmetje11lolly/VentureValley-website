@@ -37,6 +37,9 @@ Route::resource('souvenirs', SouvenirController::class)
     ->only(['index', 'show'])
     ->parameters(['souvenirs' => 'souvenir']);
 
+Route::get('/bezoeken', [HomeController::class, 'bezoeken'])
+    ->name('bezoeken');
+
 Route::get('/privacybeleid', [HomeController::class, 'privacy'])
     ->name('privacy');
 
