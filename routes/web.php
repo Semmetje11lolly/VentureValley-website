@@ -40,6 +40,9 @@ Route::resource('souvenirs', SouvenirController::class)
 Route::get('/bezoeken', [HomeController::class, 'bezoeken'])
     ->name('bezoeken');
 
+Route::get('/openingstijden', [HomeController::class, 'openingstijden'])
+    ->name('openingstijden');
+
 Route::get('/privacybeleid', [HomeController::class, 'privacy'])
     ->name('privacy');
 

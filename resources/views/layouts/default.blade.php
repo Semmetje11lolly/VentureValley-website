@@ -93,7 +93,7 @@
                 <ul class="flex flex-col gap-1 list-none">
                     <b>Praktische Informatie</b>
                     <li><a href="{{ route('bezoeken') }}">Bezoeken</a></li>
-                    <li><a href="">Openingstijden</a></li>
+                    <li><a href="{{ route('openingstijden') }}">Openingstijden</a></li>
                     <li><a href="">Plattegrond</a></li>
                     <li><a href="">Onderhoudskalender</a></li>
                     <li><a href="{{ route('parkreglement') }}">Parkreglement</a></li>
@@ -177,7 +177,7 @@
                     <summary>Praktische Informatie</summary>
                     <ul class="list-none">
                         <li><a href="{{ route('bezoeken') }}">Bezoeken</a></li>
-                        <li><a href="">Openingstijden</a></li>
+                        <li><a href="{{ route('openingstijden') }}">Openingstijden</a></li>
                         <li><a href="">Plattegrond</a></li>
                         <li><a href="">Onderhoudskalender</a></li>
                         <li><a href="{{ route('parkreglement') }}">Parkreglement</a></li>
@@ -231,7 +231,7 @@
             <ul class="flex flex-col gap-1 list-none">
                 <li><b>Pretpark</b></li>
                 <li><a href="{{ route('attracties.index') }}">Attracties</a></li>
-                <li><a href="">Openingstijden</a></li>
+                <li><a href="{{ route('openingstijden') }}">Openingstijden</a></li>
                 <li><a href="">Attracties in onderhoud</a></li>
                 <li><a href="{{ route('bezoeken') }}">Bezoeken</a></li>
             </ul>
@@ -260,7 +260,7 @@
                 <summary>Pretpark</summary>
                 <ul class="list-none">
                     <li><a href="{{ route('attracties.index') }}">Attracties</a></li>
-                    <li><a href="">Openingstijden</a></li>
+                    <li><a href="{{ route('openingstijden') }}">Openingstijden</a></li>
                     <li><a href="">Attracties in onderhoud</a></li>
                     <li><a href="{{ route('bezoeken') }}">Bezoeken</a></li>
                 </ul>

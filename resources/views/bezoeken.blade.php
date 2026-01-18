@@ -38,7 +38,7 @@
                 </li>
             </ol>
             <p>Mocht het je niet lukken, controleer dan of je alle stappen écht goed hebt gevolgd. Lukt het nog steeds
-                niet? Twijfel dan niet om het in onze <a class="text-[--color-primary] underline"
+                niet? Twijfel dan niet om het in onze <a class="text-[--color-primary] underline" target="_blank"
                                                          href="https://discord.venturevalleymc.nl/">Discord server</a>
                 te vragen! Wij helpen je graag!</p>
         </div>
@@ -53,7 +53,7 @@
                 <li>Zorg ervoor dat je de <b>normale 1.20.4 installatie</b> hebt geïnstalleerd en gespeeld. Een 'Vanilla
                     installatie' is vereist om mods te installeren.
                 </li>
-                <li>Ga naar de website van <a class="text-[--color-primary] underline"
+                <li>Ga naar de website van <a class="text-[--color-primary] underline" target="_blank"
                                               href="https://fabricmc.net/use/installer/">Fabric</a> en download de
                     installer. Als deze is gedownload, open
                     je hem.
@@ -69,10 +69,10 @@
                     aanmaken. Let hierbij op de spelling en geen hoofdletters!
                 </li>
                 <li>Als je alleen SmoothCoasters wilt en een paar functies van OptiFine, zoals Zoom en Shaders, download
-                    dan <a class="text-[--color-primary] underline"
+                    dan <a class="text-[--color-primary] underline" target="_blank"
                            href="https://filemanager.venturevalleymc.nl/modpacks/VVModpack.zip">deze Modpack</a>. Als je
                     SmoothCoasters wilt en meer OptiFine functies, zoals Connected Textures, Capes, en veel meer,
-                    download dan <a class="text-[--color-primary] underline"
+                    download dan <a class="text-[--color-primary] underline" target="_blank"
                                     href="https://filemanager.venturevalleymc.nl/modpacks/VVModpackExtra.zip">deze
                         Modpack</a>.
                 </li>
