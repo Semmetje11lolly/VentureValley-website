@@ -4,7 +4,7 @@
     @endpush
 
     <x-slot name="header">
-        <x-header height="large" image="{{ asset($restaurant->background_image) }}">
+        <x-header height="large" image="{{ asset('storage/' . $restaurant->background_image) }}">
             @if(!$restaurant->public)
                 <div class="mb-3">Let op! Dit restaurant is <span class="text-red-700">verborgen</span>!</div>
             @endif
@@ -43,7 +43,7 @@
                 <a href="{{ route('restaurants.show', $restaurant->slug) }}">
                     <article
                         class="flex flex-col justify-end min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg text-center pb-4 px-1 transition-all duration-300 hover:bg-bottom"
-                        style="background-image: linear-gradient(180deg, #00000000 70%, #000000 100%), url({{ asset($restaurant->list_image) }}); box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); corner-shape: scoop">
+                        style="background-image: linear-gradient(180deg, #00000000 70%, #000000 100%), url({{ asset('storage/' . $restaurant->list_image) }}); box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); corner-shape: scoop">
                         <span class="text-white">{{ $restaurant->type }}</span>
                         <h3 class="text-4xl text-white">{{ $restaurant->name }}</h3>
                     </article>
