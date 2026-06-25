@@ -27,7 +27,7 @@ The official website of VentureValley, a Dutch Minecraft Theme Park server.
     </ol>
 </details>
 
-[![Semmetje11lolly](https://img.shields.io/badge/-Semmetje11lolly-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Semmetje11lolly)
+[![semvde](https://img.shields.io/badge/-semvde-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/semvde)
 
 
 
@@ -56,7 +56,7 @@ Below are the instructions on how to get the project running on your local machi
 ### Installation
 1. Clone the repository
 ```sh
-git clone https://github.com/Semmetje11lolly/VentureValley-website.git vv-website
+git clone https://github.com/semvde/VentureValley-website.git vv-website
 cd vv-website
 ```
 2. Setup dependencies, environment, database and front-end assets
